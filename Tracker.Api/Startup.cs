@@ -13,7 +13,6 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Tracker.DAL;
 
-
 namespace Tracker.Api
 {
     public class Startup

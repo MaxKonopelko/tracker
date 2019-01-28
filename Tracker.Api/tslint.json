@@ -1,0 +1,107 @@
+{
+  "rulesDirectory": "./Spa_Source/",
+  "rules": {
+    "react": true,
+    "no-parameter-reassignment": true,
+    "no-duplicate-imports": false,
+    "no-this-assignment": true,
+    "no-empty-interface": true,
+    "encoding": true,
+    "member-access": true,
+    "no-string-throw": true,
+    "switch-default": true,
+    "class-name": true,
+    "curly": true,
+    "eofline": false,
+    "indent": "spaces",
+    "interface-name": true,
+    "new-parens": true,
+    "prefer-const": true,
+    "no-parameter-properties": true,
+    "max-line-length": [
+      true,
+      480
+    ],
+    "member-ordering": [
+      true,
+      "variables-before-functions"
+    ],
+    "jsdoc-format": true,
+    "no-arg": true,
+    "no-construct": true,
+    "no-bitwise": true,
+    "no-duplicate-variable": true,
+    "no-empty": false,
+    "no-eval": true,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": false,
+    "no-unused-expression": true,
+    "no-use-before-declare": false,
+    "no-inferrable-types": false,
+    "no-magic-numbers": false,
+    "no-var-requires": true,
+    "no-debugger": true,
+    "only-arrow-functions": false,
+    "prefer-for-of": true,
+    "no-unsafe-finally": true,
+    "no-var-keyword": true,
+    "import-blacklist": [],
+    "no-require-imports": false,
+    "use-isnan": true,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
+    "semicolon": [
+      true,
+      "ignore-bound-class-methods"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "variable-name": [
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "space-within-parens": true,
+    "align": [
+      true,
+      "parameters",
+      "members",
+      "elements",
+      "statements"
+    ],
+    "import-spacing": true,
+    "no-consecutive-blank-lines": true,
+    "typedef": [
+      true,
+      "call-signature"
+    ]
+  }
+}
