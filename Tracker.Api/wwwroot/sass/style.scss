@@ -1,3 +1,9 @@
+@import "growl";
+
+.input-email-invalid {
+  background: red;
+}
+
 body {
   margin: 0;
   //background: #fafbfc;
@@ -6,4 +12,67 @@ body {
   font-size: 14px;
   display: flex;
   justify-content: center;
+}
+
+.app {
+
+  .container {
+    width: 950px;
+    max-width: 1000px;
+    height: 800px;
+    background: darkgrey;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    .header {
+      height: 150px;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0px 5px 0px 5px;
+      background-image: -webkit-radial-gradient(center center, #454f56, #1d2124);
+    }
+
+    .menu {
+      background: darkslategray;
+      flex: 1;
+      height: 100%;
+
+      ul {
+
+        .menu-li {
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .newSpan {
+          color: #FFFFFF;
+          font-size: 10px;
+          font-family: cursive;
+        }
+      }
+    }
+
+    .content {
+      justify-content: center;
+      flex: 4;
+    }
+  }
+
+  .home {
+    background: green;
+  }
+
+  .services {
+    background: greenyellow;
+  }
+
+  .about_us {
+    background: cornflowerblue;
+  }
+
+  .contacts {
+    background: brown;
+  }
 }

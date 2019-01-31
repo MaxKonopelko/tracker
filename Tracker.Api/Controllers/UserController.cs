@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Tracker.Api.Models;
 using Tracker.DAL;
 
 namespace Tracker.Api.Controllers
 {
+    [Route("api/User")]
     public class UserController : Controller
     {
         private readonly TrackerContext _context;
@@ -31,9 +33,32 @@ namespace Tracker.Api.Controllers
         }
 
         [HttpPost("login")]
-        public bool Login([FromBody] User user)
+        public OperationResult<User> Login([FromBody] LoginModel loginModel)
         {
-            return _context.Users.Any(x => x.Email == user.Email && x.Password == user.Password);
+            var user = _context.Users.FirstOrDefault(x => x.Email == loginModel.Email && x.Password == loginModel.Password);
+            if (user != null)
+            {           
+                var success = new OperationResult<User>
+                {
+                    Object = new User
+                    {
+                        Id = user.Id,
+                        Email = user.Email,
+                        Name = user.Name
+                    },
+                    Message = "You have successfully login'"
+                };
+                return success;
+            }
+            else
+            {
+                var failure = new OperationResult<User>
+                {
+                    Success = false,
+                    Message = "This password or email is not correct"
+                };
+                return failure;
+            }
         }
     }
 }

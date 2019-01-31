@@ -16,7 +16,9 @@ namespace Tracker.DAL
         {
             context.Users.Add(new User
             {
-                Name = "Max"
+                Name = "Max",
+                Email = "111",
+                Password = "111"
             });
 
             context.SaveChanges();
