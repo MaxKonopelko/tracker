@@ -1,0 +1,68 @@
+$font-path: "../fonts/";
+$font-regular: $font-path + "proximanova-reg-webfont";
+$font-semibold: $font-path + "proximanova-semibold-webfont";
+$font-bold: $font-path + "proximanova-bold-webfont";
+$font-light: $font-path + "proximanova-light-webfont";
+$font-montserrat-bold: $font-path + "montserrat-bold-webfont";
+
+@font-face {
+	font-family: 'proxima_nova_rgregular';
+	src: url( $font-regular + ".eot");
+	src: url( $font-regular + ".eot?#iefix") format("embedded-opentype"),
+	url( $font-regular + ".woff2") format("woff2"),
+	url( $font-regular + ".woff") format("woff"),
+	url( $font-regular + ".ttf") format("truetype"),
+	url( $font-regular + ".svg#proxima_nova_rgregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'proxima_novasemibold';
+	src: url( $font-semibold + ".eot");
+	src: url( $font-semibold + ".eot?#iefix") format("embedded-opentype"),
+	url( $font-semibold + ".woff2") format("woff2"),
+	url( $font-semibold + ".woff") format("woff"),
+	url( $font-semibold + ".ttf") format("truetype"),
+	url( $font-semibold + ".svg#proxima_novasemibold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'proxima_novabold';
+	src: url($font-bold + ".eot");
+	src: url($font-bold + ".eot?#iefix") format("embedded-opentype"),
+	url($font-bold + ".woff2") format("woff2"),
+	url($font-bold + ".woff") format("woff"),
+	url($font-bold + ".ttf") format("truetype"),
+	url($font-bold + ".svg#proxima_novabold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'proxima_nova_ltlight';
+	src: url( $font-light + '.eot');
+	src: url( $font-light + '.eot?#iefix') format('embedded-opentype'),
+	url( $font-light + '.woff2') format('woff2'),
+	url( $font-light + '.woff') format('woff'),
+	url( $font-light + '.ttf') format('truetype'),
+	url( $font-light + '.svg#proxima_nova_ltlight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montserratbold';
+	src: url( $font-montserrat-bold + '.eot');
+	src: url( $font-montserrat-bold + '.eot?#iefix') format('embedded-opentype'),
+	url( $font-montserrat-bold + '.woff2') format('woff2'),
+	url( $font-montserrat-bold + '.woff') format('woff'),
+	url( $font-montserrat-bold + '.ttf') format('truetype'),
+	url( $font-montserrat-bold + '.svg#montserratbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-family-regular: 'proxima_nova_rgregular' , arial, helvetica, sans-serif;
+$font-family-semibold: 'proxima_novasemibold' , arial, helvetica, sans-serif;
+$font-family-bold: 'proxima_novabold' , arial, helvetica, sans-serif;
+$font-family-light: 'proxima_nova_ltlight' , arial, helvetica, sans-serif;
+$font-family-montserrat-bold: 'montserratbold' , arial, helvetica, sans-serif;

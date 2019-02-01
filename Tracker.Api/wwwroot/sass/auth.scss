@@ -1,4 +1,146 @@
-body{font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+@import '../../node_modules/compass-mixins/lib/compass/css3';
+@import 'fonts.scss';
+
+body {
+  margin: 0;
+  background-color: #1d2531;
+  min-width: 320px;
+  color: #7F8FA4;;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+
+  #wrapper {
+    padding: 80px 30px 80px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .container-login {
+      @include border-radius(4px);
+      background-color: #FFFFFF;
+      max-width: 350px;
+      margin: 51px 0 20px;
+      width: 100%;
+
+      .extra-center {
+        @include box-sizing(border-box);
+        padding: 23px 30px 3px;
+
+        .label-form {margin: 0 0 5px;}
+      }
+      .extra-top,
+      .extra-bottom {
+        border: 1px solid #E6EAEE;
+        background-color: #F8FAFC;
+        text-align: center;
+        @include box-shadow(0 1px 0 0 #E7E9ED);
+      }
+      .extra-top {
+        padding: 29px 20px 9px;
+        @include border-radius(4px 4px 0 0);
+        position: relative;
+        border-bottom: none;
+
+        .title {
+          font-size: 24px;
+          line-height: 29px;
+          display: block;
+          font-weight: normal;
+          margin: 0 0 10px;
+          //color: $text-color ;
+        }
+      }
+      .btn {
+        display: block;
+        width: 100%;
+      }
+      .extra-bottom {
+        @include border-radius(0 0 4px 4px);
+        padding: 15px 20px 3px;
+      }
+      .help-link {
+        color: #7F8FA4;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 30px 10px;
+        //font: 14px/19px $font-family-semibold ;
+        text-decoration: none;
+
+        .arrow {
+          position: relative;
+          width: 6px;
+          display: inline-block;
+          vertical-align: top;
+          margin: 5px 2px 0 0;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            border-left: 1px solid #7F8FA4;
+            border-top: 1px solid #7F8FA4;
+            @include rotate(315deg);
+            @include transition(border-color .2s ease-in-out, left .2s ease-in-out);
+          }
+        }
+        &:hover {
+          text-decoration: none;
+          color: #354052;
+
+          .arrow:before {
+            left: -6px;
+            border-left-color: #354052;
+            border-top-color: #354052;
+          }
+        }
+      }
+      .hold-btn {
+        padding: 9px 0 0;
+        margin: 0;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+        background-color: #F8FAFC;
+        color: #354052;
+        margin: 0 0 11px;
+      }
+      .logo {
+        position: absolute;
+        top: -51px;
+        left: 50%;
+        overflow: hidden;
+        text-indent: -9999px;
+        width: 70px;
+        height: 70px;
+        margin: 0 0 10px -35px;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          background: url(../images/logo-blue.png) 0 0 no-repeat;
+          @include border-radius(50%);
+        }
+      }
+    }
+  }
+}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -54,7 +196,6 @@ span.psw {
 
 /* The Modal (background) */
 .auth-form {
-
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -62,8 +203,8 @@ span.psw {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -118,7 +259,7 @@ span.psw {
   }
 }
 
-#button-red{
+#button-red {
   background: red;
 }
 
