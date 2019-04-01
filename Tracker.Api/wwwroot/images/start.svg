@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Start Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Color/Start" fill="#1BB934">
+            <path d="M10.79,8.345 L6.527,10.933 C6.229,11.113 5.986,10.975 5.986,10.625 L5.986,5.409 C5.986,5.058 6.229,4.92 6.527,5.101 L10.79,7.688 C11.088,7.869 11.088,8.164 10.79,8.345 M8,2 C4.686,2 2,4.686 2,8 C2,11.314 4.686,14 8,14 C11.313,14 14,11.314 14,8 C14,4.686 11.313,2 8,2 M8,16 C3.581,16 9.09494702e-13,12.418 9.09494702e-13,8 C9.09494702e-13,3.582 3.581,0 8,0 C12.418,0 16,3.582 16,8 C16,12.418 12.418,16 8,16" id="Start-Icon"></path>
+        </g>
+    </g>
+</svg>

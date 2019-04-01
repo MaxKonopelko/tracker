@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="30px" viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>box</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/Menu-Item/Deliveries/Inactive" transform="translate(-36.000000, 0.000000)" fill="#7F8FA4" fill-rule="nonzero">
+            <g id="box" transform="translate(36.000000, 0.000000)">
+                <polygon id="Shape" points="16.5622642 15.2365145 15.1358491 16.0145228 15.1358491 30 27.9801887 23.0103734 27.9801887 9.02489627"></polygon>
+                <polygon id="Shape" points="18.8867925 2.69502075 13.9471698 0 0.746226415 7.18257261 5.69245283 9.87759336"></polygon>
+                <polygon id="Shape" points="27.1415094 7.18257261 21.4490566 4.12655602 8.25471698 11.3091286 9.00754717 11.6763485 13.9471698 14.3651452 18.8603774 11.6950207"></polygon>
+                <polygon id="Shape" points="7.25754717 16.4502075 4.89339623 15.3049793 4.89339623 11.7448133 0.0198113208 9.09958506 0.0198113208 22.9854772 12.7716981 29.9253112 12.7716981 16.0394191 7.25754717 13.0456432"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

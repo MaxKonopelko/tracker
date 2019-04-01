@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>forbid copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Super-Administrator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deliveries-(Map-View-&gt;-Pending-&gt;-Assigned-Volunteer)" transform="translate(-380.000000, -469.000000)" fill="#ffffff">
+            <g id="Map" transform="translate(130.000000, 178.000000)">
+                <g id="Side-Panel" transform="translate(15.000000, 15.000000)">
+                    <g id="Group-5-Copy" transform="translate(15.000000, 268.000000)">
+                        <path d="M224.523466,20.890748 C225.504284,21.5892091 226.70417,22 228,22 C231.313709,22 234,19.3137087 234,16 C234,14.7041695 233.589209,13.5042844 232.890748,12.5234656 L224.523466,20.890748 Z M223.109252,19.4765344 L231.476534,11.109252 C230.495716,10.4107909 229.29583,10 228,10 C224.686291,10 222,12.6862913 222,16 C222,17.2958305 222.410791,18.4957156 223.109252,19.4765344 Z M228,24 C223.581722,24 220,20.4182782 220,16 C220,11.5817218 223.581722,8 228,8 C232.418278,8 236,11.5817218 236,16 C236,20.4182782 232.418278,24 228,24 Z" id="forbid-copy"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

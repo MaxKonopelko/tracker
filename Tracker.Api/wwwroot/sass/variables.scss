@@ -1,0 +1,65 @@
+/* Typography */
+
+$font-size-base: 14px;
+$line-height-base: 20px;
+
+$font-size-table: 14px;
+$line-height-table: 17px;
+
+$font-size-large: 24px;
+$line-height-large: 29px;
+
+$font-size-middle: 18px;
+$line-height-middle: 22px;
+
+$font-size-input: 14px;
+$line-height-input: 18px;
+
+$font-size-textarea: 14px;
+$line-height-textarea: 17px;
+
+/*colors text*/
+$text-color: #354052 ;
+$link-color: #1A91EB ;
+
+$placeholder-color: rgba( 53, 64, 82, 0.5) ;
+
+$menu-color: #7F8FA4;
+$menu-hover-color: #fff ;
+
+$text-gray: rgba( 53, 64, 82, 0.5) ;
+
+$input-color: rgba(53, 64, 82, 0.5);
+$input-color-focus: #354052;
+
+$select-color: rgba(53, 64, 82, 0.5) ;
+$select-color-focus: #354052 ;
+
+$text-blue: #1A91EB ;
+$text-pink: #FF7474 ;
+
+/*background*/
+$body-bg: #eff3f6 ;
+
+$badge-bg-blue: #1A91EB ;
+$badge-bg-red: #FF4B64;
+
+/* border-color */
+$border-red: #FF4B64;
+
+$border-input: #DFE3E9;
+$border-input-focus: #1A91EB ;
+
+$border-select: #CED0DA ;
+$border-select-focus: #1A91EB ;
+
+$border-table-green: #1BB934;
+$border-table-red: #FF7474 ;
+$border-table-blue: #1A91EB ;
+
+
+.nul{
+  padding: 0 ;
+  margin: 0 ;
+  list-style: none  ;
+}

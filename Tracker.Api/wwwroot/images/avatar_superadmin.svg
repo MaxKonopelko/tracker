@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>malecostume</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+        <circle id="path-3" cx="25" cy="25" r="25"></circle>
+        <path d="M32.5,7.45 L46.45,11.3 C48.05,11.85 49.3,13.05 50,14.6 L50,19.5 L0,19.5 L0,14.6 C0.65,13.05 1.95,11.85 3.55,11.3 L17.5,7.45 L17.5,0 L32.5,0 L32.5,7.45 Z" id="path-5"></path>
+        <path d="M32.5,7.45 L46.45,11.3 C48.05,11.85 49.3,13.05 50,14.6 L50,19.5 L0,19.5 L0,14.6 C0.65,13.05 1.95,11.85 3.55,11.3 L17.5,7.45 L17.5,0 L32.5,0 L32.5,7.45 Z" id="path-7"></path>
+        <path d="M32.5,7.45 L46.45,11.3 C48.05,11.85 49.3,13.05 50,14.6 L50,19.5 L0,19.5 L0,14.6 C0.65,13.05 1.95,11.85 3.55,11.3 L17.5,7.45 L17.5,0 L32.5,0 L32.5,7.45 Z" id="path-9"></path>
+        <path d="M32.5,7.45 L46.45,11.3 C48.05,11.85 49.3,13.05 50,14.6 L50,19.5 L0,19.5 L0,14.6 C0.65,13.05 1.95,11.85 3.55,11.3 L17.5,7.45 L17.5,0 L32.5,0 L32.5,7.45 Z" id="path-11"></path>
+        <path d="M32.5,7.45 L46.45,11.3 C48.05,11.85 49.3,13.05 50,14.6 L50,19.5 L0,19.5 L0,14.6 C0.65,13.05 1.95,11.85 3.55,11.3 L17.5,7.45 L17.5,0 L32.5,0 L32.5,7.45 Z" id="path-13"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Avatar-1">
+            <g id="malecostume">
+                <circle id="Oval" fill="#F5EEE5" fill-rule="nonzero" cx="25" cy="25" r="25"></circle>
+                <g id="Group">
+                    <g id="Clipped">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="SVGID_1_"></g>
+                        <path d="M32.5,37.95 L46.45,41.8 C48.05,42.35 49.3,43.55 50,45.1 L50,50 L0,50 L0,45.1 C0.65,43.55 1.95,42.35 3.55,41.8 L17.5,37.95 L17.5,30.5 L32.5,30.5 L32.5,37.95 Z" id="Shape" fill="#D4B08C" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                    </g>
+                    <g id="Clipped">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="SVGID_1_"></g>
+                        <g id="Group" mask="url(#mask-4)">
+                            <g transform="translate(0.000000, 30.500000)" id="Clipped">
+                                <g>
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <g id="SVGID_3_"></g>
+                                    <polygon id="Shape" fill="#1E1E23" fill-rule="nonzero" mask="url(#mask-6)" points="25.1 9.5 21.5 9.5 19.1 7 0 7 0 19.5 25.1 19.5 50.15 19.5 50.15 7 31.1 7 28.7 9.5"></polygon>
+                                </g>
+                                <g>
+                                    <mask id="mask-8" fill="white">
+                                        <use xlink:href="#path-7"></use>
+                                    </mask>
+                                    <g id="SVGID_3_"></g>
+                                    <polygon id="Shape" fill="#C1CAD4" fill-rule="nonzero" mask="url(#mask-8)" points="25 9.5 25.5 9.5 32.85 5.65 29.95 20.1 25 19.55 20.05 20.1 17.15 5.65 24.5 9.5"></polygon>
+                                </g>
+                                <g>
+                                    <mask id="mask-10" fill="white">
+                                        <use xlink:href="#path-9"></use>
+                                    </mask>
+                                    <g id="SVGID_3_"></g>
+                                    <polygon id="Shape" fill="#216DD9" fill-rule="nonzero" mask="url(#mask-10)" points="23.75 14 26.25 14 28.25 20 21.75 20"></polygon>
+                                </g>
+                                <g>
+                                    <mask id="mask-12" fill="white">
+                                        <use xlink:href="#path-11"></use>
+                                    </mask>
+                                    <g id="SVGID_3_"></g>
+                                    <polygon id="Shape" fill="#249CF2" fill-rule="nonzero" mask="url(#mask-12)" points="19.75 9.5 30.25 9.5 26.25 14 23.75 14"></polygon>
+                                </g>
+                                <g>
+                                    <mask id="mask-14" fill="white">
+                                        <use xlink:href="#path-13"></use>
+                                    </mask>
+                                    <g id="SVGID_3_"></g>
+                                    <path d="M32.75,4.5 L25.55,9.5 L30.95,15 L33,5 L32.75,4.5 Z M17.25,4.5 L24.45,9.5 L19.05,15 L17,5 L17.25,4.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-14)"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <path d="M25,37 C24.25,37 23.25,36.85 22.6,36.55 C21.8,36.2 19,34.25 18.05,33.4 C16.8,32.25 16.15,30.85 15.95,28.4 C15.75,25.95 15,17.25 15,15.25 C15,12.4 17.55,8 25,8 C32.45,8 35,12.4 35,15.25 C35,17.25 34.25,26 34.05,28.45 C33.85,30.9 33.25,32.3 31.95,33.45 C31,34.3 28.15,36.25 27.4,36.6 C26.75,36.85 25.75,37 25,37 Z" id="Shape" fill="#F2CEA5" fill-rule="nonzero"></path>
+                <path d="M28.5,30 L21.5,30 C21.3,30 21.2,30.2 21.3,30.4 C21.95,31.55 23.15,32.15 24.65,32.25 C26.2,32.35 27.9,31.6 28.7,30.4 C28.8,30.25 28.7,30 28.5,30 Z" id="Shape" fill="#A3705F" fill-rule="nonzero"></path>
+                <circle id="Oval" fill="#262626" fill-rule="nonzero" cx="29.5" cy="22.5" r="1"></circle>
+                <circle id="Oval" fill="#262626" fill-rule="nonzero" cx="20.5" cy="22.5" r="1"></circle>
+                <path d="M17.5,21 C17.5,21 18.05,19.5 20.55,19.5 C22.25,19.5 23.25,20.25 23.75,21" id="Shape" stroke="#CC9872" stroke-width="2"></path>
+                <path d="M32.55,21 C32.55,21 32,19.5 29.5,19.5 C27.1,19.5 26,21 26,22 C26,22.95 26,26.5 26,26.5" id="Shape" stroke="#BB8660" stroke-width="2"></path>
+                <path d="M34.4,24.1 C34.4,24.1 34.8,20.95 36.25,20.5 C36.45,19.6 37,17 37,15.55 C37,14.1 36.85,12.7 36.05,11.5 C35.15,10.2 33.25,9.45 32.25,9.45 C31.1,10.15 28.4,11.75 27.55,12.7 C27.1,13.2 27.75,13.6 27.75,13.6 C27.75,13.6 28.35,13.35 28.6,13.3 C29.85,12.95 32.6,12.7 33.45,13.95 C34.5,15.45 34.5,19.85 34.5,20.5 C34.5,21.1 34.4,24.1 34.4,24.1 Z" id="Shape" fill="#D98C21" fill-rule="nonzero"></path>
+                <path d="M13.75,20.5 C15.2,21 15.6,24.1 15.6,24.1 C15.6,24.1 15.5,21.1 15.5,20.5 C15.5,19.7 15.6,15.95 17.2,14.15 C19,12.15 21.4,11.5 22.75,12.4 C23.45,12.85 25.8,15.15 28.3,13.25 C29.8,12.1 32.55,9.5 32.55,9.5 C32.55,9.5 31.1,5.05 24.5,5.55 C21.7,5.8 18.6,5.1 18.6,5.1 C18.6,5.1 18.55,6.35 19.05,7 C14.9,8.2 13.55,11.2 13.15,13.5 C13.05,13.95 13,14.4 13,14.85 C13,15.1 13,15.35 13,15.55 C13,17 13.55,19.55 13.75,20.5 Z" id="Shape" fill="#E6A422" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

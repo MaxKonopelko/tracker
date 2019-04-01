@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>pause</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Inactive/Pause" fill="#7F8FA4">
+            <path d="M8,16 C3.58172178,16 0,12.4182782 0,8 C0,3.58172178 3.58172178,0 8,0 C12.4182782,0 16,3.58172178 16,8 C16,12.4182782 12.4182782,16 8,16 Z M8,14 C11.3137087,14 14,11.3137087 14,8 C14,4.68629134 11.3137087,2 8,2 C4.68629134,2 2,4.68629134 2,8 C2,11.3137087 4.68629134,14 8,14 Z M5,6 L7,6 L7,10 L5,10 L5,6 Z M9,6 L11,6 L11,10 L9,10 L9,6 Z" id="pause"></path>
+        </g>
+    </g>
+</svg>

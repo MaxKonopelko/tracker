@@ -19,6 +19,14 @@ namespace Tracker.Api.Controllers
             _context = context;
         }
 
+        [HttpGet("get-all")]
+        public List<User> GetAll()
+        {
+            var users = _context.Users.ToList();
+
+            return users;
+        }
+
         [HttpPost("add")]
         public bool Add([FromBody] User user)
         {

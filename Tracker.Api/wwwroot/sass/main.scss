@@ -1,0 +1,207 @@
+@import '../../node_modules/compass-mixins/lib/compass/css3';
+@import 'fonts.scss';
+@import 'variables.scss';
+
+#main {
+  padding: 30px 30px 30px 130px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background: #fff;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 4px 4px;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "proxima_novasemibold", arial, helvetica, sans-serif;
+
+    th {
+      border-top: 1px solid #E6EAEE;
+      background-color: #F5F8FA;
+      padding: 8px 10px;
+      text-align: left;
+      color: #7F8FA4;
+      font-weight: normal;
+    }
+
+    th:first-child {
+      padding-left: 19px;
+    }
+
+    .cell-center {
+      text-align: center;
+    }
+
+    .badge-letter.letter-green {
+      background: url(../images/pickup.svg) 0 0 no-repeat;
+    }
+
+    td {
+      padding: 5px 10px 4px;
+      border-top: 1px solid #E6EAEE;
+      height: 46px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      .list-actions {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 17px;
+
+        .sprites {
+          //display: inline-block;
+          vertical-align: top;
+          margin: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+          width: 16px;
+          height: 16px;
+          @include transition(opacity .2s ease-in-out);
+          background-position: 0 0;
+          background-repeat: no-repeat;
+
+          &.sprites-play {
+            width: 25px;
+            height: 25px;
+            background-image: url(../images/play-button.svg);
+          }
+        }
+
+        li {
+          img {
+            cursor: pointer;
+            //animation: spin 2s infinite linear;
+          }
+
+          img:hover {
+            background-image: url(../images/play-button.svg);
+          }
+
+          @keyframes spin {
+            100% {
+              //transform: rotate(360deg);
+            }
+          }
+        }
+      }
+    }
+
+    td:first-child {
+      padding-left: 19px;
+    }
+
+    .text-gray {
+      display: block;
+      font: 12px/15px "proxima_nova_rgregular", arial, helvetica, sans-serif;
+      color: #7F8FA4;
+      padding: 4px 0 0;
+    }
+  }
+
+  .aside-btn{
+    float: right;
+    margin: 0 0 -1px ;
+
+    .btn{
+      float: left;
+      min-width: 120px ;
+      margin: 0 0 16px 16px ;
+    }
+  }
+
+  .btn{
+    min-width: 72px;
+    height: 36px;
+    @include box-sizing(border-box);
+    overflow:hidden;
+    display:inline-block;
+    vertical-align:top;
+    border: 1px solid #249533;
+    margin: 0 0 16px;
+    padding: 0 13px;
+    font: 14px/36px $font-family-bold ;
+    color: #fff ;
+    cursor:pointer;
+    position: relative;
+    @include border-radius (4px);
+    text-align:center;
+    text-decoration:none;
+    @include transition( background .2s ease-in-out, border .2s ease-in-out , color .2s ease-in-out );
+    @include background(linear-gradient(180deg, #39B54A 0%, #34AA44 100%));
+
+    .sprites{
+      margin: 10px 7px 8px 2px ;
+      @include transition( opacity .2s ease-in-out );
+      opacity: 0.5 ;
+
+      &.sprites-plus { margin: 12px 9px 10px 5px ; }
+      &.sprites-pdf,
+      &.sprites-direction { margin-top: 9px ;}
+    }
+    &:hover {
+      @include background(linear-gradient(0deg, #1E930B 0%, #1E9D09 100%));
+      border-color: #1E9D09 ;
+      text-decoration: none ;
+
+      .sprites{ opacity: 1 ; }
+    }
+    &.btn-blue{
+      border-color: #1585D8 ;
+      @include background(linear-gradient(0deg, #1991EB 0%, #2DA1F8 100%));
+
+      &:hover{
+        @include background(linear-gradient(180deg, #1584D7 0%, #2184CF 100%));
+      }
+    }
+    &.btn-red{
+      border-color: #ED1C24 ;
+      @include background(linear-gradient(180deg, #F85359 0%, #DC151D 100%));
+
+      &:hover{
+        @include background(linear-gradient(180deg, #DF2229 0%, #DC151D 100%));
+      }
+    }
+    &.btn-gray{
+      border-color: #CED0DA ;
+      @include background(linear-gradient(180deg, #FFFFFF 0%, #F2F4F7 100%));
+      color: #7383A1;
+
+      &:hover{
+        border-color: #7F8FA4 ;
+        @include background(linear-gradient(180deg, #FFFFFF 0%, #FCFCFC 100%));
+      }
+    }
+    &.btn-small{
+      width: 36px ;
+      min-width: 36px ;
+      padding: 0 2px ;
+      text-align: center;
+
+      .sprites{
+        margin-left: 0 ;
+        margin-right: 0;
+      }
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.btn-blue:disabled,
+    &.btn-blue:disabled:hover,
+    &.btn-red:disabled,
+    &.btn-red:disabled:hover,
+    &.btn-gray:disabled,
+    &.btn-gray:disabled:hover {
+      cursor: default ;
+      border-color: #E6EAEE;
+      background: #F2F4F7;
+      color: rgba(53, 64, 82, 0.5 );
+    }
+  }
+}
+

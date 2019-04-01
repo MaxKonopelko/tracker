@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Comment Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Inactive/Note" fill="#7F8FA4">
+            <path d="M13.8666667,2.14506667 L2.13333333,2.14506667 L2.13333333,9.61173333 L5.3632,9.61173333 L5.82826667,12.4064 L10.0213333,9.61173333 L13.8666667,9.61173333 L13.8666667,2.14506667 Z M13.8666667,11.7333333 L10.6666667,11.7333333 L4.26666667,16 L3.5552,11.7333333 L2.13333333,11.7333333 C0.954666667,11.7333333 0,10.7786667 0,9.6 L0,2.13333333 C0,0.954666667 0.954666667,0 2.13333333,0 L13.8666667,0 C15.0453333,0 16,0.954666667 16,2.13333333 L16,9.6 C16,10.7786667 15.0453333,11.7333333 13.8666667,11.7333333 L13.8666667,11.7333333 Z" id="Comment-Icon"></path>
+        </g>
+    </g>
+</svg>

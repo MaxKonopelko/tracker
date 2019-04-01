@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Close Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Super-Administrator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deliveries-(Map-View-&gt;-Pending-&gt;-Assigned-Volunteer)" transform="translate(-1367.000000, -205.000000)" fill="#ffffff">
+            <g id="Map" transform="translate(130.000000, 178.000000)">
+                <g id="Search" transform="translate(991.000000, 15.000000)">
+                    <path d="M250.732828,16.7328283 L250.732828,10.8994949 L253.066162,10.8994949 L253.066162,16.7328283 L258.899495,16.7328283 L258.899495,19.0661616 L253.066162,19.0661616 L253.066162,24.8994949 L250.732828,24.8994949 L250.732828,19.0661616 L244.899495,19.0661616 L244.899495,16.7328283 L250.732828,16.7328283 Z" id="Close-Button" transform="translate(251.899495, 17.899495) rotate(-315.000000) translate(-251.899495, -17.899495) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

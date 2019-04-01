@@ -1,6 +1,9 @@
 import { default as React, ReactNode } from 'react';
-import { ContentComponent } from './content/content.Component';
-import { MenuComponent, MenuType } from './content/menu.Сomponent';
+import { ContentComponent } from './content.Component';
+import { MenuType } from './menu.Сomponent';
+import { HeaderComponent } from './header.Component';
+import { MenuTestComponent } from './content/menuTest.Component';
+import { Routes2 } from '../../routes/routes';
 
 interface IState
 {
@@ -24,12 +27,16 @@ export class MainOmponent extends React.Component<{}, IState>
   public render(): ReactNode
   {
     return (
-      <div className="app">
-        <div className="container">
-          <MenuComponent onSelectMenu={this.onSelectMenu}/>
-          <ContentComponent ref={el => this.refContentComponent = el}/>
+      <>
+        <HeaderComponent/>
+        <MenuTestComponent/>
+        <div id="main">
+          <form action="#">
+            {/*<ContentComponent ref={el => this.refContentComponent = el}/>*/}
+            <Routes2/>
+          </form>
+          {/*<MenuComponent onSelectMenu={this.onSelectMenu}/>*/}
         </div>
-      </div>
-    );
+      </>);
   }
 }

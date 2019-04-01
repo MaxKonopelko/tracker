@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Static/Pickup-Tag">
+            <g id="Tag">
+                <rect id="Base" fill="#1BB934" x="0" y="0" width="15" height="15" rx="4"></rect>
+                <path d="M5.94799996,12.1679999 L3.53999996,12.1679999 L3.53999996,2.82999992 L8.21599996,2.82999992 C10.316,2.82999992 11.464,4.24399992 11.464,5.93799992 C11.464,7.61799992 10.316,9.03199992 8.21599996,9.03199992 L5.94799996,9.03199992 L5.94799996,12.1679999 Z M7.89399996,6.93199992 C8.53799996,6.93199992 9.01399996,6.56799992 9.01399996,5.93799992 C9.01399996,5.29399992 8.53799996,4.92999992 7.89399996,4.92999992 L5.94799996,4.92999992 L5.94799996,6.93199992 L7.89399996,6.93199992 Z" id="P" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

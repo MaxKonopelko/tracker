@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Inactive/Problem" fill="#7F8FA4" fill-rule="nonzero">
+            <path d="M8,0 C12.411247,0 16,3.58879197 16,8 C16,12.411208 12.411208,16 8,16 C3.58879197,16 0,12.411208 0,8 C0,3.58879197 3.58879197,0 8,0 Z M3.68999994,7.4000001 C3.35862907,7.4000001 3.08999991,7.66862926 3.08999991,8.00000012 C3.08999991,8.33137098 3.35862907,8.60000014 3.68999994,8.60000014 L12.3099996,8.60000014 C12.6413704,8.60000014 12.9099996,8.33137098 12.9099996,8.00000012 C12.9099996,7.66862926 12.6413704,7.4000001 12.3099996,7.4000001 L3.68999994,7.4000001 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

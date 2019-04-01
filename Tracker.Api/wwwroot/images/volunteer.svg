@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="24px" viewBox="0 0 18 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>user copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Super-Administrator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deliveries-(Map-View-&gt;-Pending-&gt;-Assigned-Volunteer)" transform="translate(-921.000000, -675.000000)" fill-rule="nonzero">
+            <g id="Map" transform="translate(130.000000, 178.000000)">
+                <g id="Markers" transform="translate(91.000000, 106.000000)">
+                    <g id="user-copy-4" transform="translate(700.000000, 391.000000)">
+                        <path d="M9,0 C4.0365,0 0,4.0365 0,9 C0,15.2385 8.124,23.4345 8.469,23.781 C8.616,23.9265 8.808,24 9,24 C9.192,24 9.384,23.9265 9.531,23.781 C9.876,23.4345 18,15.2385 18,9 C18,4.0365 13.9635,0 9,0 Z" id="Shape" fill="#2196F3"></path>
+                        <g id="Group" transform="translate(4.500000, 3.000000)" fill="#FAFAFA">
+                            <circle id="Oval" cx="4.5" cy="2.25" r="2.25"></circle>
+                            <path d="M9,10.5 L0,10.5 L0,8.25 C0,7.008 1.008,6 2.25,6 L6.75,6 C7.992,6 9,7.008 9,8.25 L9,10.5 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

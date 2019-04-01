@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Location Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Super-Administrator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deliveries-(Map-View-&gt;-Pending-&gt;-Assigned-Volunteer)" transform="translate(-1133.000000, -203.000000)" fill="#ffffff">
+            <g id="Map" transform="translate(130.000000, 178.000000)">
+                <g id="Search" transform="translate(991.000000, 15.000000)">
+                    <path d="M17,16 C17,15.448 17.448,15 18,15 C18.552,15 19,15.448 19,16 C19,16.552 18.552,17 18,17 C17.448,17 17,16.552 17,16 M18.021,12.005 C15.815,12.005 14.02,13.799 14.02,16.005 C14.02,17.28 15.9,20.257 18.021,22.908 C20.141,20.257 22.021,17.28 22.021,16.005 C22.021,13.799 20.227,12.005 18.021,12.005 M18,26 C18,26 12,19.314 12,16 C12,12.686 14.686,10 18,10 C21.314,10 24,12.686 24,16 C24,19.314 18,26 18,26" id="Location-Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

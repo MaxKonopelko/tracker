@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>forbid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Inactive/Cancel" fill="#7F8FA4">
+            <path d="M4.52346558,12.890748 C5.50428444,13.5892091 6.70416951,14 8,14 C11.3137087,14 14,11.3137087 14,8 C14,6.70416951 13.5892091,5.50428444 12.890748,4.52346558 L4.52346558,12.890748 Z M3.10925202,11.4765344 L11.4765344,3.10925202 C10.4957156,2.41079094 9.29583049,2 8,2 C4.68629134,2 2,4.68629134 2,8 C2,9.29583049 2.41079094,10.4957156 3.10925202,11.4765344 Z M8,16 C3.58172178,16 0,12.4182782 0,8 C0,3.58172178 3.58172178,0 8,0 C12.4182782,0 16,3.58172178 16,8 C16,12.4182782 12.4182782,16 8,16 Z" id="forbid"></path>
+        </g>
+    </g>
+</svg>

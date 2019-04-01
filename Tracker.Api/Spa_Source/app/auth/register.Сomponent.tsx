@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
-import { IUser } from '../../models/models';
 import { RegistrationService } from '../../services/registration.service';
 import { Growl } from '../../libreris/growl';
 import { Patterns } from '../../controls/controls';
 import { Link } from 'react-router-dom';
+import { User } from '../../models/models';
 
 interface IProps
 {
@@ -35,7 +35,7 @@ export class RegisterComponent extends React.Component<IProps, IState>
     };
   }
 
-  private registerUser(user: IUser): void
+  private registerUser(user: User): void
   {
 
     RegistrationService.add(user).then(bool =>
@@ -68,7 +68,7 @@ export class RegisterComponent extends React.Component<IProps, IState>
   {
     event.preventDefault();
 
-    const user: IUser = {
+    const user = {
       name: this.state.name,
       password: this.state.password,
       email: this.state.email,

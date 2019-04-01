@@ -1,7 +1,24 @@
-export class User
+export class EntityBase
 {
-  public id: number;
+  public id?: number;
+}
+
+export class User extends EntityBase
+{
   public email: string;
+  public name: string;
+}
+
+export class Client extends EntityBase
+{
+  public family: string;
+  public address: string;
+  public city: string;
+  public country: string;
+}
+
+export class Project extends EntityBase
+{
   public name: string;
 }
 

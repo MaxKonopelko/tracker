@@ -24,7 +24,7 @@ const plugins = [
     include: 'node_modules/**',
     namedExports: {
       './node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement', 'Fragment', 'createFactory', 'ReactDOM'],
-      './node_modules/react-dom/index.js': ['render'],
+      './node_modules/react-dom/index.js': ['render', 'createPortal'],
     }
 
   }),

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="36px" viewBox="0 0 28 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>user copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,0 C5.382,0 0,5.382 0,12 C0,20.318 10.832,31.246 11.292,31.708 C11.488,31.902 11.744,32 12,32 C12.256,32 12.512,31.902 12.708,31.708 C13.168,31.246 24,20.318 24,12 C24,5.382 18.618,0 12,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Super-Administrator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deliveries-(Map-View-&gt;-Pending-&gt;-Assigned-Volunteer)" transform="translate(-819.000000, -446.000000)" fill-rule="nonzero">
+            <g id="Map" transform="translate(130.000000, 178.000000)">
+                <g id="Markers" transform="translate(91.000000, 106.000000)">
+                    <g id="user-copy" transform="translate(600.000000, 164.000000)">
+                        <g id="Shape">
+                            <use fill="#1BB934" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <path stroke="#249533" stroke-width="2" d="M12,-1 C19.1702847,-1 25,4.82971525 25,12 C25,15.9150512 22.878647,20.4814766 19.3372043,25.3854558 C18.0992737,27.0996686 16.7646733,28.7428383 15.4149909,30.2665121 C14.5705607,31.2198 13.8966057,31.9315177 13.4114713,32.4187236 C13.03152,32.7947979 12.5243025,33 12,33 C11.4756975,33 10.96848,32.7947979 10.583361,32.4135713 C10.1033943,31.9315177 9.42943926,31.2198 8.58500914,30.2665121 C7.23532669,28.7428383 5.90072633,27.0996686 4.66279565,25.3854558 C1.12135303,20.4814766 -1,15.9150512 -1,12 C-1,4.82971525 4.82971525,-1 12,-1 Z"></path>
+                        </g>
+                        <g id="Group" transform="translate(6.000000, 4.000000)" fill="#FAFAFA">
+                            <circle id="Oval" cx="6" cy="3" r="3"></circle>
+                            <path d="M12,14 L0,14 L0,11 C0,9.344 1.344,8 3,8 L9,8 C10.656,8 12,9.344 12,11 L12,14 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

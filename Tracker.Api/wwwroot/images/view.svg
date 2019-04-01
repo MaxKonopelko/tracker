@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Views Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Inactive/View" transform="translate(0.000000, -1.000000)" fill="#7F8FA4">
+            <path d="M9,6 C7.896,6 7,6.896 7,8 C7,9.105 7.896,10 9,10 C10.105,10 11,9.105 11,8 C11,6.896 10.105,6 9,6 M9,13 C6.628,13 4.221,11.192 2.297,8 C4.221,4.808 6.628,3 9,3 C11.372,3 13.779,4.808 15.703,8 C13.779,11.192 11.372,13 9,13 M9,1 C5.738,1 2.475,3.333 0,8 L0,8 C2.475,12.667 5.738,15 9,15 C12.263,15 15.525,12.667 18,8 L18,8 C15.525,3.333 12.263,1 9,1" id="Views-Icon"></path>
+        </g>
+    </g>
+</svg>
