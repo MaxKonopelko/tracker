@@ -119,7 +119,7 @@
     #main .aside-btn .btn {
       float: left;
       min-width: 120px;
-      margin: 12px 12px; }
+      margin: 0 0 16px 16px; }
   #main .btn {
     min-width: 72px;
     height: 36px;

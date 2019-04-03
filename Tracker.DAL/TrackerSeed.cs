@@ -56,35 +56,30 @@ namespace Tracker.DAL
                 {
                     Family = "Vladimir",
                     City = "Boston",
-                    Address = "Gagarina 45a",
                     Country = "Austria",
                 },
                 new Client
                 {
                     Family = "Semen",
                     City = "Minsk",
-                    Address = "Moskovski 77-105",
                     Country = "Russia",
                 },
                 new Client
                 {
                     Family = "Ivan",
                     City = "Vitebsk",
-                    Address = "Gorovca 11",
                     Country = "Belarus",
                 },
                 new Client
                 {
                     Family = "Petr",
                     City = "Moskow",
-                    Address = "Lenina 25",
                     Country = "Germany",
                 },
                 new Client
                 {
                     Family = "Vasiliy",
                     City = "Paris",
-                    Address = "Bloxina 12",
                     Country = "France",
                 },
             });
@@ -106,26 +101,46 @@ namespace Tracker.DAL
                 new Project
                 {
                     Name = "Tracker",
-                    ClientId = 1
+                    Description = "The best Tracker",
+                    Budget = "500$",
+                    Status = "Active",
+                    Actions = "Edit",
+                    ClientId = 1,
                 },
                 new Project
                 {
                     Name = "Timer",
+                    Description = "The Clock",
+                    Budget = "10000$",
+                    Status = "Active",
+                    Actions = "Edit",
                     ClientId = 2
                 },
                 new Project
                 {
                     Name = "Blog",
+                    Description = "Blog the Mythology",
+                    Budget = "5000$",
+                    Status = "Deactivate",
+                    Actions = "Edit",
                     ClientId = 3
                 },
                 new Project
                 {
                     Name = "Petr",
+                    Description = "History",
+                    Budget = "2000$",
+                    Status = "Active",
+                    Actions = "Edit",
                     ClientId = 4
                 },
                 new Project
                 {
                     Name = "Vasiliy",
+                    Description = "Hello Vasiliy",
+                    Budget = "15000$",
+                    Status = "Deactivate",
+                    Actions = "Edit",
                     ClientId = 1
                 },
             });

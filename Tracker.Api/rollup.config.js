@@ -23,8 +23,9 @@ const plugins = [
   commonjs({
     include: 'node_modules/**',
     namedExports: {
-      './node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement', 'Fragment', 'createFactory', 'ReactDOM'],
-      './node_modules/react-dom/index.js': ['render', 'createPortal'],
+      './node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement', 'Fragment', 'createFactory', 'ReactDOM', 'useContext', 'useMemo', 'cloneElement'],
+      './node_modules/react-dom/index.js': ['render', 'createPortal', 'findDOMNode'],
+      './node_modules/react-bootstrap/dist/react-bootstrap.js': ['Dropdown'],
     }
 
   }),

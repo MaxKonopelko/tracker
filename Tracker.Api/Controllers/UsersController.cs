@@ -9,12 +9,12 @@ using Tracker.DAL;
 
 namespace Tracker.Api.Controllers
 {
-    [Route("api/User")]
-    public class UserController : Controller
+    [Route("api/Users")]
+    public class UsersController : Controller
     {
         private readonly TrackerContext _context;
 
-        public UserController(TrackerContext context)
+        public UsersController(TrackerContext context)
         {
             _context = context;
         }

@@ -9,28 +9,28 @@ using Tracker.DAL;
 namespace Tracker.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Client")]
-    public class ClientController : Controller
+    [Route("api/Projects")]
+    public class ProjectsController : Controller
     {
         private readonly TrackerContext _context;
 
-        public ClientController(TrackerContext context)
+        public ProjectsController(TrackerContext context)
         {
             _context = context;
         }
 
         [HttpGet("get-all")]
-        public List<Client> GetAll()
+        public List<Project> GetAll()
         {
-            var clients = _context.Clients.ToList();
+            var projects = _context.Projects.ToList();
 
-            return clients;
+            return projects;
         }
 
         [HttpPost("add")]
-        public bool Add([FromBody] Client client)
+        public bool Add([FromBody] Project project)
         {
-           _context.Clients.Add(client);
+            _context.Projects.Add(project);
             _context.SaveChanges();
             return true;
         }

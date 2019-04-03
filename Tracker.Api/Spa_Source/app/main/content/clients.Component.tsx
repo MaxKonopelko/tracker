@@ -9,7 +9,6 @@ interface IState
 {
   clients: Client[];
   isShow: boolean;
-  family: string;
 }
 
 export class ClientsComponent extends React.Component<{}, IState>
@@ -21,7 +20,6 @@ export class ClientsComponent extends React.Component<{}, IState>
     this.state = {
       clients: [],
       isShow: false,
-      family: '',
     };
 
     this.refreshTable = this.refreshTable.bind(this);

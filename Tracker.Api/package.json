@@ -13,8 +13,8 @@
     "dev": "cross-env NODE_ENV=development rollup -cw"
   },
   "devDependencies": {
-    "@types/react": "16.7.18",
-    "@types/react-dom": "16.0.11",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
     "@types/react-router": "4.4.3",
     "@types/react-router-dom": "4.3.1",
     "cross-env": "5.2.0",
@@ -34,13 +34,16 @@
     "typescript": "2.8.3"
   },
   "dependencies": {
+    "@types/react-bootstrap": "0.32.17",
     "axios": "^0.18.0",
+    "bootstrap": "4.3.1",
     "compass": "0.1.1",
     "compass-mixins": "0.12.10",
     "concurrently": "4.0.1",
     "node-sass": "4.9.3",
-    "react": "^16.7.0",
-    "react-dom": "16.7.0",
+    "react": "16.8.6",
+    "react-bootstrap": "1.0.0-beta.6",
+    "react-dom": "16.8.6",
     "react-router-dom": "4.3.1"
   }
 }

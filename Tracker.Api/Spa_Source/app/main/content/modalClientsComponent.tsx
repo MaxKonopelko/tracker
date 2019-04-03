@@ -27,7 +27,6 @@ export class ModalClientsComponent extends React.Component<IProps, IState>
       clients: [],
       client: {
         ...new Client(),
-        address: '',
         family: '',
         city: '',
         country: '',
@@ -65,39 +64,17 @@ export class ModalClientsComponent extends React.Component<IProps, IState>
   {
     return (
       <ModalComponent ref={el => this.modal = el} handleSubmit={this.handleSubmit} onModal={this.props.modalToShow}>
-        <form action="#">
+        <div>
           {/*<strong className="modal-title">Cancel In Transit Delivery?</strong>*/}
           <div className="content-modal">
 
-            <div className="row foo-col">
-              <div className="col">
-                <div className="box-panel">
-                  <strong className="head-panel">Name</strong>
-                  <input type="text" name="family" value={this.state.client.family} onChange={this.onChange} placeholder={'Name'}/>
-                </div>
-              </div>
-              <div className="col">
-                <div className="box-panel">
-                  <strong className="head-panel">Country</strong>
-                  <input type="text" name="country" value={this.state.client.country} onChange={this.onChange} placeholder={'Country'}/>
-                </div>
-              </div>
-
-              <div className="col">
-                <div className="box-panel">
-                  <strong className="head-panel">Address</strong>
-                  <input type="text" name="address" value={this.state.client.address} onChange={this.onChange} placeholder={'Address'}/>
-                </div>
-              </div>
-              <div className="col">
-                <div className="box-panel">
-                  <strong className="head-panel">City</strong>
-                  <input type="text" name="city" value={this.state.client.city} onChange={this.onChange} placeholder={'City'}/>
-                </div>
+            <div className="col">
+                <input type="text" name="family" value={this.state.client.family} onChange={this.onChange} placeholder={'Name'}/>
+                <input type="text" name="country" value={this.state.client.country} onChange={this.onChange} placeholder={'Country'}/>
+                <input type="text" name="city" value={this.state.client.city} onChange={this.onChange} placeholder={'City'}/>
               </div>
             </div>
-          </div>
-        </form>
+        </div>
       </ModalComponent>
     );
   }

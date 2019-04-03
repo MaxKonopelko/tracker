@@ -49,8 +49,7 @@ export class TableComponent<TEntityRow extends EntityBase> extends React.Compone
           </tr>
           {
             this.props.rows.map(row =>
-              this.getRow(row)
-            )
+              this.getRow(row))
           }
           </tbody>
         </table>

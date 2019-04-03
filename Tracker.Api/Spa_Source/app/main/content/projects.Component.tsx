@@ -1,10 +1,14 @@
 import { default as React, ReactNode } from 'react';
 import { Project } from '../../../models/models';
 import { ProjectService } from '../../../services/project.service';
+import { tableColumnsProjects } from '../../../models/table-maps';
+import { TableComponent } from '../../../controls/table/table.Component';
+import { ModalProjectsComponent } from './modalProjectsComponent';
 
 interface IState
 {
   projects: Project[];
+  isShow: boolean;
 }
 
 export class ProjectsComponent extends React.Component<{}, IState>
@@ -15,61 +19,47 @@ export class ProjectsComponent extends React.Component<{}, IState>
 
     this.state = {
       projects: [],
+      isShow: false
     };
   }
 
   public componentDidMount(): void
   {
+    this.refreshTable();
+  }
+
+  public refreshTable(): void
+  {
     ProjectService.get().then(projects =>
     {
-      this.setState(
-        {
-          projects: projects
-        }
-      );
+      this.setState({
+        projects: projects
+      });
     });
   }
+
+  public onToggleModal = (bool: boolean) =>
+  {
+    this.setState({
+      isShow: bool
+    });
+  };
 
   public render(): ReactNode
   {
     return (
       <>
-        <div className="aside-btn">
-          <a href="#" className="btn">
-            <span className="sprites sprites-plus">
-
-            </span>New Project
-          </a>
+        <div onClick={() => this.onToggleModal(true)} className="aside-btn">
+          <div className="btn">
+            <span className="sprites sprites-plus"/>New Project
+          </div>
         </div>
-        <div className="container-white">
-          <table>
-            <tbody>
-            <tr>
-              <th>Family Name</th>
-              <th>Project</th>
-              <th>Street Address</th>
-              <th className="cell-center">City & Province</th>
-              <th>Time</th>
-              <th>Control</th>
-            </tr>
-            {
-              <tr>
-                <td>{}</td>
-                <td>{}</td>
-                <td>{}</td>
-                <td className="cell-center">{}</td>
-                <td>00:00</td>
-                <td>
-                  <ul className="list-actions">
-                    <li>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            }
-            </tbody>
-          </table>
-        </div>
+        <TableComponent rows={this.state.projects} columns={tableColumnsProjects}/>
+        {
+          this.state.isShow && (
+            <ModalProjectsComponent getProjects={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
+          )
+        }
       </>
     );
   }
