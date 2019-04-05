@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
 import { DashboardComponent } from './content/dashboard.Component';
-import { ReportsComponent } from './content/reports.Component';
 import { HelpComponent } from './content/helpComponent';
 import { TimerComponent } from './content/timerComponent';
 import { MenuType } from './menu.Сomponent';

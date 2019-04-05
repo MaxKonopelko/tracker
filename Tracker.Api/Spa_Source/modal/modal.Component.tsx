@@ -45,7 +45,7 @@ export class ModalComponent extends React.Component<IProps, IState>
     return (
       <>
         <div className="simplebox-overlay"/>
-        <div className="modal modal-small" id="cancel-delivery">
+        <div className="modal-tracker modal-mid" id="cancel-delivery">
           <form action="#">
             <div className="container-form">
               <strong className="modal-caption">Add client

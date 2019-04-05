@@ -1396,7 +1396,7 @@ textarea {
 #modal form {
   margin: 0; }
 
-#modal .modal {
+#modal .modal-tracker {
   width: 510px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1405,27 +1405,29 @@ textarea {
   border-radius: 4px;
   background: #FFFFFF;
   margin: 15px 0; }
-  #modal .modal p {
+  #modal .modal-tracker .hold {
+    padding: 0px 30px 0px 30px; }
+  #modal .modal-tracker p {
     margin: 0 0 10px; }
-  #modal .modal .content-modal {
+  #modal .modal-tracker .content-modal {
     padding: 0 30px 15px; }
-    #modal .modal .content-modal > p:last-child {
+    #modal .modal-tracker .content-modal > p:last-child {
       margin-bottom: 15px; }
-    #modal .modal .content-modal .box-panel {
+    #modal .modal-tracker .content-modal .box-panel {
       margin-bottom: 20px; }
-      #modal .modal .content-modal .box-panel:last-child {
+      #modal .modal-tracker .content-modal .box-panel:last-child {
         margin-bottom: 15px; }
-  #modal .modal.modal-middle {
+  #modal .modal-tracker.modal-middle {
     width: 744px; }
-  #modal .modal.modal-large {
+  #modal .modal-tracker.modal-large {
     width: 1000px; }
-  #modal .modal.modal-mid {
+  #modal .modal-tracker.modal-mid {
     width: 680px; }
-  #modal .modal.modal-small {
+  #modal .modal-tracker.modal-small {
     width: 440px; }
-  #modal .modal.modal-larges {
+  #modal .modal-tracker.modal-larges {
     width: 980px; }
-  #modal .modal .close {
+  #modal .modal-tracker .close {
     position: absolute;
     top: 13px;
     right: 13px;
@@ -1434,7 +1436,7 @@ textarea {
     width: 34px;
     height: 34px;
     cursor: pointer; }
-    #modal .modal .close:before {
+    #modal .modal-tracker .close:before {
       content: '';
       position: absolute;
       top: 50%;
@@ -1452,7 +1454,7 @@ textarea {
       -moz-transition: opacity 0.2s ease-in-out;
       -o-transition: opacity 0.2s ease-in-out;
       transition: opacity 0.2s ease-in-out; }
-    #modal .modal .close:hover:before {
+    #modal .modal-tracker .close:hover:before {
       opacity: 1; }
 
 .modal-title {

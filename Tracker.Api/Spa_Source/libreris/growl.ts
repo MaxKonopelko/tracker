@@ -68,7 +68,7 @@ export class Growl
     show.addEventListener('mouseover', stop);
     start();
 
-    let timeout: number;
+    let timeout: any;
 
     function start(): void
     {

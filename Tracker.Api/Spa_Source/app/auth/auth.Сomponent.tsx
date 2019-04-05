@@ -22,12 +22,12 @@ export class AuthOmponent extends React.Component<IProps, IState>
     };
   }
 
-  public testParent = () =>
-  {
-    console.log(typeof this.props.onSelectClick);
-
-    this.props.onSelectClick();
-  };
+  // public testParent = () =>
+  // {
+  //   console.log(typeof this.props.onSelectClick);
+  //
+  //   this.props.onSelectClick();
+  // };
 
   public render(): ReactNode
   {

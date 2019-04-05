@@ -57,7 +57,7 @@ export class ProjectsComponent extends React.Component<{}, IState>
         <TableComponent rows={this.state.projects} columns={tableColumnsProjects}/>
         {
           this.state.isShow && (
-            <ModalProjectsComponent getProjects={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
+            <ModalProjectsComponent projects={this.state.projects} displayProjects={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
           )
         }
       </>

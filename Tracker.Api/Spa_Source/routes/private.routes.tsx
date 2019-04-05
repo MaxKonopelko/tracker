@@ -14,16 +14,17 @@ export function PrivateRoute({component, ...rest}: IPrivateRouteProps): any
       const Component = component;
 
       //const test = fakeAuth.isAuthenticated;
-      if (true)
+      if (5 > 3)
       {
         return <Component {...props} />;
       }
       else
       {
-        return <Redirect to={{
-          pathname: '/auth/login',
-          state: {from: props.location}
-        }}/>;
+        // return <Redirect to={{
+        //   pathname: '/auth/login',
+        //   state: {from: props.location}
+        // }}/>;
+        return null;
       }
     }
     }/>

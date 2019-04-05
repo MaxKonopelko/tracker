@@ -1,11 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter, Router } from 'react-router-dom';
-import { App } from './app/app';
 import { browserHistory } from './routes';
-import { Growl } from './libreris/growl';
-
-Growl.init();
+import { Router } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './app/app';
 
 ReactDOM.render((
     <BrowserRouter>

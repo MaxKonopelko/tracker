@@ -2,23 +2,17 @@ import { default as React, ReactNode } from 'react';
 import { Project } from '../../../models/models';
 import { ModalComponent } from '../../../modal/modal.Component';
 import { ProjectService } from '../../../services/project.service';
-import Dropdown from 'react-bootstrap/Dropdown';
-//import { Dropdown } from 'react-bootstrap';
-//import Dropdown from 'react-bootstrap/es/Dropdown';
-//import Dropdown from 'react-bootstrap';
-// import * as DropdownButton from 'react-bootstrap/lib/DropdownButton';
-// import * as DropdownMenu from 'react-bootstrap/lib/DropdownMenu';
-// import * as DropdownToggle from 'react-bootstrap/lib/DropdownToggle';
+import { Dropdown } from 'react-bootstrap';
 
 interface IProps
 {
-  getProjects: () => void;
+  displayProjects: () => void;
   modalToShow: () => void;
+  projects: Project[];
 }
 
 interface IState
 {
-  projects: Project[];
   project: Project;
 }
 
@@ -31,7 +25,6 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
     super(props);
 
     this.state = {
-      projects: [],
       project: {
         ...new Project(),
         name: '',
@@ -53,7 +46,7 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
   {
     ProjectService.add(clientModel).then(res =>
     {
-      this.props.getProjects();
+      this.props.displayProjects();
       this.modal.onClose();
     });
   }
@@ -70,20 +63,10 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
     });
   };
 
-  public Counter = () =>
+  public onSelect = (eventKey: any, event: Object) =>
   {
-    return (
-      {/*<Dropdown>*/}
-        {/*<Dropdown.Toggle variant="success" id="dropdown-basic">*/}
-          {/*Dropdown Button*/}
-        {/*</Dropdown.Toggle>*/}
-        {/*<Dropdown.Menu>*/}
-          {/*<Dropdown.Item href="#/action-1">Action</Dropdown.Item>*/}
-          {/*<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>*/}
-          {/*<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
-        {/*</Dropdown.Menu>*/}
-      {/*</Dropdown>*/}
-    );
+    console.log('event key', eventKey);
+    console.log('event', event);
   };
 
   public render(): ReactNode
@@ -96,6 +79,7 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
             <div className="col">
               <div className="hold">
                 <h2>Project Information</h2>
+
                 <div className="row">
                   <div className="col">
                     <label className="label-form">Name</label>
@@ -105,6 +89,23 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
                     <label className="label-form">Budget $</label>
                     <input type="text" name="budget" value={this.state.project.budget} onChange={this.onChange}/>
                   </div>
+
+                  <div className="col">
+                    <label className="label-form">Clients</label>
+                    <Dropdown onSelect={this.onSelect}>
+                      <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Clients
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        {
+                          this.props.projects.map(row =>
+                            <Dropdown.Item eventKey={row.id} key={row.id}>{row.name}</Dropdown.Item>
+                          )
+                        }
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+
                 </div>
                 <label className="label-form">Description</label>
                 <input type="text" name="description" value={this.state.project.description} onChange={this.onChange}/>
@@ -118,17 +119,6 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
                     <input type="text" name="actions" value={this.state.project.actions} onChange={this.onChange}/>
                   </div>
 
-                  <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                      Dropdown Button
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-
                 </div>
               </div>
             </div>
@@ -138,4 +128,3 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
     );
   }
 }
-

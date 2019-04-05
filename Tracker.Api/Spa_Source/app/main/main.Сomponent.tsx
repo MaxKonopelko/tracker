@@ -1,6 +1,4 @@
 import { default as React, ReactNode } from 'react';
-import { ContentComponent } from './content.Component';
-import { MenuType } from './menu.Сomponent';
 import { HeaderComponent } from './header.Component';
 import { MenuTestComponent } from './content/menuTest.Component';
 import { Routes2 } from '../../routes/routes';
@@ -12,17 +10,17 @@ interface IState
 
 export class MainOmponent extends React.Component<{}, IState>
 {
-  private refContentComponent: ContentComponent;
+  //private refContentComponent: ContentComponent;
 
   constructor(props: {})
   {
     super(props);
   }
 
-  public onSelectMenu = (value: MenuType) =>
-  {
-    this.refContentComponent.selectMenu(value);
-  };
+  // public onSelectMenu = (value: MenuType) =>
+  // {
+  //   this.refContentComponent.selectMenu(value);
+  // };
 
   public render(): ReactNode
   {

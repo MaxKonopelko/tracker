@@ -14,7 +14,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noEmitHelpers": true,
-    "noUnusedLocals": true,
     "noImplicitThis": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": true,
@@ -24,7 +23,10 @@
     "forceConsistentCasingInFileNames": false,
     "suppressImplicitAnyIndexErrors": true,
     "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
+    "noUnusedParameters": false,
+    "strictNullChecks": false,
+    "noUnusedLocals": false,
     "typeRoots": [
       "./node_modules/@types"
     ],
@@ -32,9 +34,5 @@
       "es2018",
       "dom"
     ]
-  },
-  "include": [
-    "Spa_Sourse/**/*",
-    "test/**/*"
-  ]
+  }
 }
