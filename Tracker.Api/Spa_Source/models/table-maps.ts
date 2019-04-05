@@ -10,8 +10,8 @@ export const tableColumnsClients: ITableColumn[] = [
     label: 'Id'
   },
   {
-    key: 'family',
-    label: 'Family'
+    key: 'name',
+    label: 'Name'
   },
   {
     key: 'city',
@@ -39,6 +39,10 @@ export const tableColumnsProjects: ITableColumn[] = [
   {
     key: 'budget',
     label: 'Budget'
+  },
+  {
+    key: 'client',
+    label: 'Client'
   },
   {
     key: 'status',

@@ -1,7 +1,7 @@
 import { default as React, ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export class MenuTestComponent extends React.Component
+export class MenuComponent extends React.Component
 {
   public render(): ReactNode
   {
@@ -15,7 +15,7 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                             <img src="/images/growth.svg" width="32" height="30" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/growth (1).svg" width="32" height="30" alt="image"/>
+                                <img src="/images/growth%20(1).svg" width="32" height="30" alt="image"/>
                             </span>
                         </span>
               Dashboard</NavLink>
@@ -25,7 +25,7 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                              <img src="/images/stopwatch.svg" width="32" height="30" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/stopwatch (1).svg" width="32" height="30" alt="image"/>
+                                <img src="/images/stopwatch%20(1).svg" width="32" height="30" alt="image"/>
                             </span>
                         </span>
               Timer</NavLink>
@@ -34,7 +34,7 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                             <img src="/images/report.svg" width="34" height="30" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/report (1).svg" width="34" height="30" alt="image"/>
+                                <img src="/images/report%20(1).svg" width="34" height="30" alt="image"/>
                             </span>
                             {/*<span className="badge">1</span>*/}
                         </span>
@@ -44,16 +44,16 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                             <img src="/images/3d.svg" width="28" height="30" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/3d (1).svg" width="28" height="30" alt="image"/>
+                                <img src="/images/3d%20(1).svg" width="28" height="30" alt="image"/>
                             </span>
                         </span>
               Projects</NavLink>
             </li>
             <li><NavLink to="/main/clients" activeClassName="active">
                         <span className="menu-icon">
-                            <img src="/images/teamwork (2).svg" width="30" height="30" alt="image"/>
+                            <img src="/images/teamwork%20(2).svg" width="30" height="30" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/teamwork (1).svg" width="30" height="30" alt="image"/>
+                                <img src="/images/teamwork%20(1).svg" width="30" height="30" alt="image"/>
                             </span>
                         </span>
               Clients</NavLink>
@@ -62,7 +62,7 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                             <img src="/images/collaboration.svg" width="32" height="32" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/collaboration (1).svg" width="32" height="32" alt="image"/>
+                                <img src="/images/collaboration%20(1).svg" width="32" height="32" alt="image"/>
                             </span>
                         </span>
               Team</NavLink>
@@ -71,7 +71,7 @@ export class MenuTestComponent extends React.Component
                         <span className="menu-icon">
                             <img src="/images/customer-support.svg" width="34" height="32" alt="image"/>
                             <span className="inner-icon">
-                                <img src="/images/customer-support (1).svg" width="34" height="32" alt="image"/>
+                                <img src="/images/customer-support%20(1).svg" width="34" height="32" alt="image"/>
                             </span>
                         </span>
               Help</NavLink>

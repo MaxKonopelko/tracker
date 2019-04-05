@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
-import { Routes } from '../../routes/routes';
+import { AuthRoutes } from '../../routes/authRoutes';
 
 interface IProps{
   onSelectClick?: () => void;
@@ -11,7 +11,7 @@ interface IState
   isAuthComponent: boolean;
 }
 
-export class AuthOmponent extends React.Component<IProps, IState>
+export class AuthComponent extends React.Component<IProps, IState>
 {
   constructor(props: {})
   {
@@ -31,6 +31,6 @@ export class AuthOmponent extends React.Component<IProps, IState>
 
   public render(): ReactNode
   {
-    return <Routes/>;
+    return <AuthRoutes/>;
   }
 }

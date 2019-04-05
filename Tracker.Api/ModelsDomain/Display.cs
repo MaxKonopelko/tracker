@@ -13,9 +13,19 @@ namespace Tracker.Api.ModelsDomain
 
     public class ClientDisplay : DomainBase
     {
-        public string Family { get; set; }
+        public string Name { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
         public int ProjectsCount { get; set; }
+    }
+
+    public class ProjectDisplay : DomainBase
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Budget { get; set; }
+        public string Status { get; set; }
+        public string Actions { get; set; }
+        public string Client { get; set; }
     }
 }

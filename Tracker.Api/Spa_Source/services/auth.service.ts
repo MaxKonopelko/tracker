@@ -1,8 +1,8 @@
 import { LoginModel, OperationResult, User } from '../models/models';
 import { HttpMethod, HttpService } from './http.service';
 import { routerRedirect } from '../routes';
-import { BrowserStorage } from '../libreris/browser-storage';
-import { Growl } from '../libreris/growl';
+import { BrowserStorage } from '../libraries/browser-storage';
+import { Growl } from '../libraries/growl';
 
 function bla<T>(ttt: T): T
 {

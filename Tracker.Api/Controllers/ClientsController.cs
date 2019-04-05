@@ -32,7 +32,8 @@ namespace Tracker.Api.Controllers
                     CreatedDate = client.CreatedDate,
                     Country = client.Country,
                     City = client.City,
-                    Family = client.Family,
+                    
+                    Name = client.Name,
                     ProjectsCount = client.Projects.Count
                 })
                 .First(x => x.Id == 1);
@@ -51,7 +52,7 @@ namespace Tracker.Api.Controllers
                     CreatedDate = client.CreatedDate,
                     Country = client.Country,
                     City = client.City,
-                    Family = client.Family,
+                    Name = client.Name,
                     ProjectsCount = client.Projects.Count
                 })
                 .ToList();

@@ -45,7 +45,7 @@ namespace Tracker.DAL
     public class Client : EntityBase
     {
         [Required]
-        public string Family { get; set; }
+        public string Name { get; set; }
 
         [Required]
         public string City { get; set; }
@@ -60,20 +60,21 @@ namespace Tracker.DAL
     {
         [Required]
         public string Name { get; set; }
+
         [Required]
         public string Description { get; set; }
-        //[Required]
-        //public string Users { get; set; }
+        
         [Required]
         public string Budget { get; set; }
+
         [Required]
         public string Status { get; set; }
+
         [Required]
         public string Actions { get; set; }
 
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
-
         public Client Client { get; set; }
     }
 }

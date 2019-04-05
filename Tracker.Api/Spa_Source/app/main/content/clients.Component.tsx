@@ -2,7 +2,7 @@ import { default as React, ReactNode } from 'react';
 import { Client } from '../../../models/models';
 import { TableComponent } from '../../../controls/table/table.Component';
 import { tableColumnsClients } from '../../../models/table-maps';
-import { ModalClientsComponent } from './modalClientsComponent';
+import { CreateClientsModalComponent } from '../modals/createClientsModal.Component';
 import { ClientService } from '../../../services/client.service';
 
 interface IState
@@ -59,7 +59,7 @@ export class ClientsComponent extends React.Component<{}, IState>
         <TableComponent rows={this.state.clients} columns={tableColumnsClients}/>
         {
           this.state.isShow && (
-            <ModalClientsComponent getClients={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
+            <CreateClientsModalComponent getClients={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
           )
         }
       </>

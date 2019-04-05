@@ -3,7 +3,7 @@ import { Project } from '../../../models/models';
 import { ProjectService } from '../../../services/project.service';
 import { tableColumnsProjects } from '../../../models/table-maps';
 import { TableComponent } from '../../../controls/table/table.Component';
-import { ModalProjectsComponent } from './modalProjectsComponent';
+import { CreateProjectModalComponent } from '../modals/createProjectModal.Component';
 
 interface IState
 {
@@ -28,7 +28,7 @@ export class ProjectsComponent extends React.Component<{}, IState>
     this.refreshTable();
   }
 
-  public refreshTable(): void
+  public refreshTable = () =>
   {
     ProjectService.get().then(projects =>
     {
@@ -36,7 +36,7 @@ export class ProjectsComponent extends React.Component<{}, IState>
         projects: projects
       });
     });
-  }
+  };
 
   public onToggleModal = (bool: boolean) =>
   {
@@ -57,7 +57,7 @@ export class ProjectsComponent extends React.Component<{}, IState>
         <TableComponent rows={this.state.projects} columns={tableColumnsProjects}/>
         {
           this.state.isShow && (
-            <ModalProjectsComponent projects={this.state.projects} displayProjects={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
+            <CreateProjectModalComponent displayProjects={this.refreshTable} modalToShow={() => this.onToggleModal(false)}/>
           )
         }
       </>

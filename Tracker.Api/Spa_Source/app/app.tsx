@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
-import { AppRoutes } from '../routes/routes';
+import { AppRoutes } from '../routes/authRoutes';
 import { fakeAuth } from '../routes/private.routes';
 
 interface IState

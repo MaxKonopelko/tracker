@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
 import { RegistrationService } from '../../services/registration.service';
-import { Growl } from '../../libreris/growl';
+import { Growl } from '../../libraries/growl';
 import { Patterns } from '../../controls/controls';
 import { Link } from 'react-router-dom';
 import { User } from '../../models/models';

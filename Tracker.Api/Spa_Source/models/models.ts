@@ -11,7 +11,7 @@ export class User extends EntityBase
 
 export class Client extends EntityBase
 {
-  public family: string;
+  public name: string;
   public city: string;
   public country: string;
   public projectsCount: number;
@@ -24,6 +24,8 @@ export class Project extends EntityBase
   public budget: string;
   public status: string;
   public actions: string;
+  public clientId: number;
+  public clientName: string;
 }
 
 export class LoginModel

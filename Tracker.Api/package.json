@@ -11,45 +11,33 @@
     "sass-build": "yarn node-sass wwwroot/sass/ -o wwwroot/css/",
     "sass-watch": "yarn sass-build && yarn node-sass -w wwwroot/sass/ -o wwwroot/css/",
     "dev": "--mode development --open --hot",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --devtool=inline-source-map --watch"
   },
   "devDependencies": {
     "@types/react": "16.8.10",
+    "@types/react-bootstrap": "0.32.17",
     "@types/react-dom": "16.8.3",
     "@types/react-router": "4.4.3",
     "@types/react-router-dom": "4.3.1",
-    "@types/react-bootstrap": "0.32.17",
-    "cross-env": "5.2.0",
-    "rollup": "0.59.4",
-    "rollup-plugin-cleanup": "3.0.0-beta.1",
-    "rollup-plugin-commonjs": "9.1.3",
-    "rollup-plugin-livereload": "0.6.0",
-    "rollup-plugin-node-resolve": "3.3.0",
-    "rollup-plugin-replace": "2.0.0",
-    "rollup-plugin-serve": "0.4.2",
-    "rollup-plugin-typescript": "0.8.1",
-    "rollup-plugin-uglify": "3.0.0",
-    "rollup-watch": "4.3.1",
-    "shx": "0.2.2",
     "tslib": "1.9.2",
     "tslint": "5.10.0",
     "typescript": "2.8.3",
-    "html-webpack-plugin": "3.2.0",
     "webpack": "4.29.6",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap": "4.3.1",
     "compass": "0.1.1",
     "compass-mixins": "0.12.10",
     "concurrently": "4.0.1",
     "node-sass": "4.9.3",
-    "bootstrap": "4.3.1",
     "react": "16.8.6",
     "react-bootstrap": "1.0.0-beta.6",
     "react-dom": "16.8.6",
     "react-router-dom": "4.3.1",
-    "ts-loader": "5.3.3"
+    "ts-loader": "5.3.3",
+    "webpack-livereload-plugin": "^2.2.0"
   }
 }

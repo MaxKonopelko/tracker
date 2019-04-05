@@ -54,31 +54,31 @@ namespace Tracker.DAL
             {
                 new Client
                 {
-                    Family = "Vladimir",
+                    Name = "Vladimir",
                     City = "Boston",
                     Country = "Austria",
                 },
                 new Client
                 {
-                    Family = "Semen",
+                    Name = "Semen",
                     City = "Minsk",
                     Country = "Russia",
                 },
                 new Client
                 {
-                    Family = "Ivan",
+                    Name = "Ivan",
                     City = "Vitebsk",
                     Country = "Belarus",
                 },
                 new Client
                 {
-                    Family = "Petr",
+                    Name = "Petr",
                     City = "Moskow",
                     Country = "Germany",
                 },
                 new Client
                 {
-                    Family = "Vasiliy",
+                    Name = "Vasiliy",
                     City = "Paris",
                     Country = "France",
                 },

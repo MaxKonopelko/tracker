@@ -15,7 +15,7 @@ interface IState
   client: Client;
 }
 
-export class ModalClientsComponent extends React.Component<IProps, IState>
+export class CreateClientsModalComponent extends React.Component<IProps, IState>
 {
   private modal: ModalComponent;
 
@@ -27,7 +27,7 @@ export class ModalClientsComponent extends React.Component<IProps, IState>
       clients: [],
       client: {
         ...new Client(),
-        family: '',
+        name: '',
         city: '',
         country: '',
       }
@@ -69,7 +69,7 @@ export class ModalClientsComponent extends React.Component<IProps, IState>
           <div className="content-modal">
 
             <div className="col">
-                <input type="text" name="family" value={this.state.client.family} onChange={this.onChange} placeholder={'Name'}/>
+                <input type="text" name="name" value={this.state.client.name} onChange={this.onChange} placeholder={'Name'}/>
                 <input type="text" name="country" value={this.state.client.country} onChange={this.onChange} placeholder={'Country'}/>
                 <input type="text" name="city" value={this.state.client.city} onChange={this.onChange} placeholder={'City'}/>
               </div>

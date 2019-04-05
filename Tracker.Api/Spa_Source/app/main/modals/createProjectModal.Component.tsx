@@ -1,22 +1,24 @@
 import { default as React, ReactNode } from 'react';
-import { Project } from '../../../models/models';
+import { Client, Project } from '../../../models/models';
 import { ModalComponent } from '../../../modal/modal.Component';
 import { ProjectService } from '../../../services/project.service';
 import { Dropdown } from 'react-bootstrap';
+import { ClientService } from '../../../services/client.service';
 
 interface IProps
 {
   displayProjects: () => void;
   modalToShow: () => void;
-  projects: Project[];
 }
 
 interface IState
 {
   project: Project;
+  clients: Client[];
+  dropdownTitle: string;
 }
 
-export class ModalProjectsComponent extends React.Component<IProps, IState>
+export class CreateProjectModalComponent extends React.Component<IProps, IState>
 {
   private modal: ModalComponent;
 
@@ -28,11 +30,14 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
       project: {
         ...new Project(),
         name: '',
-        status: '',
+        status: 'Active',
         description: '',
         actions: '',
-        budget: ''
-      }
+        budget: '',
+        clientId: null,
+      },
+      clients: [],
+      dropdownTitle: 'Select Client'
     };
   }
 
@@ -42,9 +47,9 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
     this.addProject(this.state.project);
   };
 
-  private addProject(clientModel: Project): void
+  private addProject(projectModel: Project): void
   {
-    ProjectService.add(clientModel).then(res =>
+    ProjectService.add(projectModel).then(res =>
     {
       this.props.displayProjects();
       this.modal.onClose();
@@ -63,11 +68,34 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
     });
   };
 
-  public onSelect = (eventKey: any, event: Object) =>
+  public onSelect = (eventKey: string) =>
   {
-    console.log('event key', eventKey);
-    console.log('event', event);
+    const key = parseInt(eventKey);
+    const clientName: string = this.state.clients.find(x => x.id === key).name;
+
+    this.setState({
+      project: {
+        ...this.state.project,
+        clientId: key
+      },
+      dropdownTitle: clientName
+    });
   };
+
+  public componentDidMount(): void
+  {
+    this.getClients();
+  }
+
+  public getClients(): void
+  {
+    ClientService.get().then(clients =>
+    {
+      this.setState({
+        clients: clients
+      });
+    });
+  }
 
   public render(): ReactNode
   {
@@ -79,7 +107,6 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
             <div className="col">
               <div className="hold">
                 <h2>Project Information</h2>
-
                 <div className="row">
                   <div className="col">
                     <label className="label-form">Name</label>
@@ -94,12 +121,12 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
                     <label className="label-form">Clients</label>
                     <Dropdown onSelect={this.onSelect}>
                       <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Clients
+                        {this.state.dropdownTitle}
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
                         {
-                          this.props.projects.map(row =>
-                            <Dropdown.Item eventKey={row.id} key={row.id}>{row.name}</Dropdown.Item>
+                          this.state.clients.map(client =>
+                            <Dropdown.Item key={client.id} eventKey={client.id}>{client.name}</Dropdown.Item>
                           )
                         }
                       </Dropdown.Menu>
@@ -114,11 +141,6 @@ export class ModalProjectsComponent extends React.Component<IProps, IState>
                     <label className="label-form">Status</label>
                     <input type="text" name="status" value={this.state.project.status} onChange={this.onChange}/>
                   </div>
-                  <div className="col col-small">
-                    <label className="label-form">Actions</label>
-                    <input type="text" name="actions" value={this.state.project.actions} onChange={this.onChange}/>
-                  </div>
-
                 </div>
               </div>
             </div>

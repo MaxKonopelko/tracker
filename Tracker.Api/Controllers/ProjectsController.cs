@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Tracker.Api.ModelsDomain;
 using Tracker.DAL;
 
 namespace Tracker.Api.Controllers
@@ -20,11 +22,23 @@ namespace Tracker.Api.Controllers
         }
 
         [HttpGet("get-all")]
-        public List<Project> GetAll()
+        public List<ProjectDisplay> GetAll()
         {
-            var projects = _context.Projects.ToList();
+            List<ProjectDisplay> projectsDisplays = _context.Projects
+                .Include(x => x.Client)
+                .Select(project => new ProjectDisplay
+                {
+                    Id = project.Id,
+                    CreatedDate = project.CreatedDate,
+                    Name = project.Name,
+                    Description = project.Description,
+                    Status = project.Status,
+                    Budget = project.Budget,
+                    Actions = project.Actions,
+                    Client = project.Client.Name,
+                }).ToList();
 
-            return projects;
+            return projectsDisplays;
         }
 
         [HttpPost("add")]
