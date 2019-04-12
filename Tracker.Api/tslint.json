@@ -17,7 +17,7 @@
     "interface-name": true,
     "new-parens": true,
     "prefer-const": true,
-    "no-parameter-properties": true,
+    "no-parameter-properties": false,
     "max-line-length": [
       true,
       480

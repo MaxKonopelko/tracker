@@ -25,7 +25,6 @@ namespace Tracker.Api.Controllers
         public ClientDisplay GetById()
         {
             ClientDisplay client11 = _context.Clients
-                .Include(x => x.Projects)
                 .Select(client => new ClientDisplay
                 {
                     Id = client.Id,
@@ -45,7 +44,6 @@ namespace Tracker.Api.Controllers
         public List<ClientDisplay> GetAll()
         {
             List<ClientDisplay> clientsDisplays = _context.Clients
-                .Include(x => x.Projects)
                 .Select(client => new ClientDisplay
                 {
                     Id = client.Id,

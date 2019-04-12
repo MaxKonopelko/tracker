@@ -9,10 +9,11 @@ namespace Tracker.DAL
 {
     public static class InitDb
     {
-        public static void InitConnectionString(IServiceCollection services)
+        public static void InitConnectionString(IServiceCollection services, string connection)
         {
             services.AddDbContext<TrackerContext>(x =>
-                x.UseSqlServer("Data Source=DESKTOP-P5T4DB7;Initial Catalog=Tracker;Integrated Security=True;"));
+                x.UseLazyLoadingProxies().UseSqlServer(connection)
+            );
         }
 
         public static void Init(IApplicationBuilder app)

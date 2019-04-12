@@ -13,6 +13,7 @@ namespace Tracker.DAL
             CreateUsers(context);
             CreateClients(context);
             CreateProjects(context);
+            AddProjectsInUsers(context);
         }
 
         private static void CreateUsers(TrackerContext context)
@@ -23,25 +24,29 @@ namespace Tracker.DAL
                 {
                     Name = "Max",
                     Email = "111",
-                    Password = "111"
+                    Password = "111",
+                    Age = 33
                 },
                 new User
                 {
                     Name = "Tom",
                     Email = "222",
-                    Password = "111"
+                    Password = "111",
+                    Age = 17
                 },
                 new User
                 {
                     Name = "Rom",
                     Email = "333",
-                    Password = "111"
+                    Password = "111",
+                    Age = 61
                 },
                 new User
                 {
                     Name = "Gnom",
                     Email = "444",
-                    Password = "111"
+                    Password = "111",
+                    Age = 22
                 }
             });
 
@@ -89,13 +94,6 @@ namespace Tracker.DAL
 
         public static void CreateProjects(TrackerContext context)
         {
-            var t = context.Clients.ToList();
-
-            //context.Projects.Add(new Project()
-            //{
-            //    Name = "Bla",
-            //    ClientId = 1
-            //});
             context.Projects.AddRange(new List<Project>
             {
                 new Project
@@ -144,6 +142,41 @@ namespace Tracker.DAL
                     ClientId = 1
                 },
             });
+
+            context.SaveChanges();
+        }
+
+        public static void AddProjectsInUsers(TrackerContext context)
+        {
+            var user1 = context.Users.First(x => x.Id == 1);
+            var user2 = context.Users.First(x => x.Id == 2);
+            var user3 = context.Users.First(x => x.Id == 3);
+            var user4 = context.Users.First(x => x.Id == 4);
+
+            user1.ProjectsUsers.Add(new ProjectUser
+            {
+                ProjectId = 1,
+                UserId = user1.Id,
+            });
+
+            user1.ProjectsUsers.Add(new ProjectUser
+            {
+                ProjectId = 2,
+                UserId = user1.Id,
+            });
+
+            user2.ProjectsUsers.Add(new ProjectUser
+            {
+                ProjectId = 2,
+                UserId = user2.Id,
+            });
+
+            user3.ProjectsUsers.Add(new ProjectUser
+            {
+                ProjectId = 4,
+                UserId = user3.Id,
+            });
+
             context.SaveChanges();
         }
     }

@@ -21,24 +21,36 @@ export class MenuComponent extends React.Component
               Dashboard</NavLink>
             </li>
 
-            <li><NavLink to="/main/timer" activeClassName="active">
+            <li>
+              <NavLink to="/main/timer" activeClassName="active">
                         <span className="menu-icon">
                              <img src="/images/stopwatch.svg" width="32" height="30" alt="image"/>
                             <span className="inner-icon">
                                 <img src="/images/stopwatch%20(1).svg" width="32" height="30" alt="image"/>
                             </span>
                         </span>
-              Timer</NavLink>
+                Timer</NavLink>
             </li>
-            <li><NavLink to="/main/reports" activeClassName="active">
+            <li>
+              <NavLink to="/main/reports" activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/report.svg" width="34" height="30" alt="image"/>
                             <span className="inner-icon">
                                 <img src="/images/report%20(1).svg" width="34" height="30" alt="image"/>
                             </span>
-                            {/*<span className="badge">1</span>*/}
+                          {/*<span className="badge">1</span>*/}
                         </span>
-              Reports</NavLink>
+                Reports</NavLink>
+            </li>
+            <li>
+              <NavLink to="/main/users" activeClassName="active">
+                        <span className="menu-icon">
+                            <img src="/images/teamwork%20(2).svg" width="30" height="30" alt="image"/>
+                            <span className="inner-icon">
+                                <img src="/images/teamwork%20(1).svg" width="30" height="30" alt="image"/>
+                            </span>
+                        </span>
+                Users</NavLink>
             </li>
             <li><NavLink to="/main/projects" activeClassName="active">
                         <span className="menu-icon">
@@ -49,32 +61,35 @@ export class MenuComponent extends React.Component
                         </span>
               Projects</NavLink>
             </li>
-            <li><NavLink to="/main/clients" activeClassName="active">
+            <li>
+              <NavLink to="/main/clients" activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/teamwork%20(2).svg" width="30" height="30" alt="image"/>
                             <span className="inner-icon">
                                 <img src="/images/teamwork%20(1).svg" width="30" height="30" alt="image"/>
                             </span>
                         </span>
-              Clients</NavLink>
+                Clients</NavLink>
             </li>
-            <li><NavLink to="/main/team" activeClassName="active">
+            <li>
+              <NavLink to="/main/team" activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/collaboration.svg" width="32" height="32" alt="image"/>
                             <span className="inner-icon">
                                 <img src="/images/collaboration%20(1).svg" width="32" height="32" alt="image"/>
                             </span>
                         </span>
-              Team</NavLink>
+                Team</NavLink>
             </li>
-            <li><NavLink to="/main/help" activeClassName="active">
+            <li>
+              <NavLink to="/main/help" activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/customer-support.svg" width="34" height="32" alt="image"/>
                             <span className="inner-icon">
                                 <img src="/images/customer-support%20(1).svg" width="34" height="32" alt="image"/>
                             </span>
                         </span>
-              Help</NavLink>
+                Help</NavLink>
             </li>
           </ul>
         </div>

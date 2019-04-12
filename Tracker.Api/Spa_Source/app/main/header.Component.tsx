@@ -1,6 +1,19 @@
 import { default as React, ReactNode } from 'react';
+import { ConnectedProps } from '../../store/types';
+import { IAppState } from '../../store/state';
+import { connect } from 'react-redux';
+import { Team_State } from '../../store/actions/team';
+
 //iconfinder_bear_russian_animal.svg
-export class HeaderComponent extends React.Component
+
+interface IStateProps
+{
+  team: Team_State.State.IState;
+}
+
+type IProps = ConnectedProps<IStateProps>;
+
+class HeaderComponent extends React.Component<IProps>
 {
   public render(): ReactNode
   {
@@ -11,6 +24,8 @@ export class HeaderComponent extends React.Component
             <div className="head-title">
               <h1>Dashboard</h1>
             </div>
+            <h3>{this.props.team.title + this.props.team.num}</h3>
+
             <div className="user-dropdown">
               <a href="#" className="link-user">
                 <span className="avatar"><img src="/images/iconfinder_bear_russian_animal.svg" width="50" height="50" alt="image"/></span>
@@ -30,3 +45,9 @@ export class HeaderComponent extends React.Component
     );
   }
 }
+
+const mapStateToProps = (state: IAppState): IStateProps => ({
+  team: state.team
+});
+
+export const HeaderComponent_Connect = connect(mapStateToProps)(HeaderComponent);

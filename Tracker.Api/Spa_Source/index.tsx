@@ -1,16 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { browserHistory } from './routes';
-import { Router } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-import { App } from './app/app';
+import { Route } from 'react-router';
+import { Provider } from 'react-redux';
+import { browserHistory, store } from './store/store';
+import { ConnectedRouter } from 'connected-react-router';
+import { AppComponent } from './app/appComponent';
 
-ReactDOM.render((
-    <BrowserRouter>
-      <Router history={browserHistory}>
-        <App/>
-      </Router>
-    </BrowserRouter>
+ReactDOM.render(
+  (
+    <Provider store={store}>
+      <ConnectedRouter history={browserHistory}>
+        <Route component={AppComponent}/>
+      </ConnectedRouter>
+    </Provider>
   ),
   document.getElementById('wrapper')
 );

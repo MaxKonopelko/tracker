@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tracker.DAL;
 
 namespace Tracker.Api.ModelsDomain
 {
@@ -27,5 +28,6 @@ namespace Tracker.Api.ModelsDomain
         public string Status { get; set; }
         public string Actions { get; set; }
         public string Client { get; set; }
+        public int UsersCount { get; set; }
     }
 }

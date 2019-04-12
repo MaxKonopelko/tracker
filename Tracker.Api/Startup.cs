@@ -17,12 +17,15 @@ namespace Tracker.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+
+        private bool IsDev { get; }
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            IsDev = env.IsDevelopment();
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -33,8 +36,10 @@ namespace Tracker.Api
                     options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
-
-            InitDb.InitConnectionString(services);
+            
+            string modeconnection = IsDev ? "DevConnection" : "ProdConnection";
+            string connection = Configuration.GetConnectionString(modeconnection);
+            InitDb.InitConnectionString(services, connection);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +74,7 @@ namespace Tracker.Api
                     template: "{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapSpaFallbackRoute("angular-fallback",
-                    new { controller = "Home", action = "Index" });
+                    new {controller = "Home", action = "Index"});
             });
         }
     }

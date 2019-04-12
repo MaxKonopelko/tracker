@@ -51,5 +51,28 @@ export const tableColumnsProjects: ITableColumn[] = [
   {
     key: 'actions',
     label: 'Actions'
+  },
+  {
+    key: 'usersCount',
+    label: 'Users'
+  }
+];
+
+export const tableColumnsUsers: ITableColumn[] = [
+  {
+    key: 'name',
+    label: 'Name'
+  },
+  {
+    key: 'email',
+    label: 'Email'
+  },
+  {
+    key: 'age',
+    label: 'Age'
+  },
+  {
+    key: 'projectsCount',
+    label: 'Projects Count'
   }
 ];

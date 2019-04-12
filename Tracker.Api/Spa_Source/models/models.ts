@@ -7,6 +7,8 @@ export class User extends EntityBase
 {
   public email: string;
   public name: string;
+  public age?: string;
+  public projectsCount?: string;
 }
 
 export class Client extends EntityBase

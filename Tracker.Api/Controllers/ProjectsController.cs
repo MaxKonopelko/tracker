@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +26,7 @@ namespace Tracker.Api.Controllers
         [HttpGet("get-all")]
         public List<ProjectDisplay> GetAll()
         {
-            List<ProjectDisplay> projectsDisplays = _context.Projects
-                .Include(x => x.Client)
+            IQueryable<ProjectDisplay> projectsDisplays = _context.Projects
                 .Select(project => new ProjectDisplay
                 {
                     Id = project.Id,
@@ -36,9 +37,11 @@ namespace Tracker.Api.Controllers
                     Budget = project.Budget,
                     Actions = project.Actions,
                     Client = project.Client.Name,
-                }).ToList();
+                    UsersCount = project.ProjectsUsers.Count
+                });
 
-            return projectsDisplays;
+            List<ProjectDisplay> res = projectsDisplays.ToList();
+            return res;
         }
 
         [HttpPost("add")]

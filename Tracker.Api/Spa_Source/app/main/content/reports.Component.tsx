@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ReactNode } from 'react';
+import { default as React, ReactNode } from 'react';
 
 export class ReportsComponent extends React.Component
 {

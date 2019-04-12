@@ -13,6 +13,12 @@ namespace Tracker.DAL
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProjectUser>()
+                .HasKey(bc => new { bc.ProjectId, bc.UserId });
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Project> Projects { get; set; }
@@ -30,20 +36,13 @@ namespace Tracker.DAL
         public bool IsDelited { get; set; }
     }
 
-    public class User : EntityBase
-    {
-        [Required]
-        public string Email { get; set; }
-
-        [Required]
-        public string Password { get; set; }
-
-        [Required]
-        public string Name { get; set; }
-    }
-
     public class Client : EntityBase
     {
+        public Client()
+        {
+          Projects = new List<Project>();
+        }
+
         [Required]
         public string Name { get; set; }
 
@@ -53,17 +52,22 @@ namespace Tracker.DAL
         [Required]
         public string Country { get; set; }
 
-        public List<Project> Projects { get; set; }
+        public virtual List<Project> Projects { get; set; }
     }
 
     public class Project : EntityBase
     {
+        public Project()
+        {
+          ProjectsUsers = new List<ProjectUser>();  
+        }
+
         [Required]
         public string Name { get; set; }
 
         [Required]
         public string Description { get; set; }
-        
+
         [Required]
         public string Budget { get; set; }
 
@@ -75,6 +79,40 @@ namespace Tracker.DAL
 
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
+
+        public virtual List<ProjectUser> ProjectsUsers { get; set; }
+    }
+
+    public class User : EntityBase
+    {
+        public User()
+        {
+           ProjectsUsers = new List<ProjectUser>();
+        }
+
+        [Required]
+        public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public int Age { get; set; }
+
+        public virtual List<ProjectUser> ProjectsUsers { get; set; }
+    }
+
+    public class ProjectUser
+    {
+        [ForeignKey(nameof(User))]
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
+
+        [ForeignKey(nameof(Project))]
+        public int ProjectId { get; set; }
+        public virtual Project Project { get; set; }
     }
 }
