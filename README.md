@@ -1,5 +1,4 @@
-# ASP.NET Core with ReactJS Example
-Simple setup and skeleton for ASP.NET Core Web API with ReactJS 
+# ASP.NET Core with ReactJS(TypeScript) and Redux + Webpack
 
 ## What Languages and Technologies are in? 
 Tracker app on the following stack:
@@ -12,16 +11,19 @@ Tracker app on the following stack:
   - React
   - React-Redux
   - Axios API
-  - HTML5, CSS3
+  - HTML5, CSS3, SASS
 
 ### How this thing works?
 To run this application in development environment, you should run front-end and back-end projects separately:
+
+In folder Tracker.Api/
 
 - Back-end:
 ```
 dotnet run
 ```
-In folder Tracker.Api*
+In folder Tracker.Api/
+
 will be availiable on `http://localhost:7000`
 
 - Front-end:
