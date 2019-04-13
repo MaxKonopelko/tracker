@@ -8,6 +8,7 @@ export namespace Team_State
     {
       CHANGE_TITLE = '[TEAM] CHANGE_TITLE',
       CHANGE_NUM   = '[TEAM] CHANGE_NUM',
+      SHOW_NUM     = '[TEAM] SHOW_NUM',
     }
 
     export namespace Types
@@ -24,7 +25,13 @@ export namespace Team_State
         public payload: number;
       }
 
-      export type Actions = ChangeTitleAction | ChangeNumAction;
+      export class ShowNumAction implements IActionType<boolean>
+      {
+        public type: Type.SHOW_NUM;
+        public payload: boolean;
+      }
+
+      export type Actions = ChangeTitleAction | ChangeNumAction | ShowNumAction;
     }
 
     export namespace Of
@@ -38,6 +45,11 @@ export namespace Team_State
         type: Type.CHANGE_NUM,
         payload: payload
       });
+
+      export const showNumAction = (payload: boolean): Types.ShowNumAction => ({
+        type: Type.SHOW_NUM,
+        payload: payload
+      });
     }
   }
 
@@ -47,6 +59,7 @@ export namespace Team_State
     {
       title: string;
       num?: number;
+      bool?: boolean;
     }
 
     export const init: IState = {
@@ -66,6 +79,11 @@ export namespace Team_State
           return {
             ...state,
             num: action.payload
+          };
+        case Actions.Type.SHOW_NUM:
+          return {
+            ...state,
+            bool: action.payload
           };
         default:
           return state;

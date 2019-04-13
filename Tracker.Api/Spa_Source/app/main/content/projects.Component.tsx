@@ -4,11 +4,19 @@ import { ProjectService } from '../../../services/project.service';
 import { tableColumnsProjects } from '../../../models/table-maps';
 import { TableComponent } from '../../../controls/table/table.Component';
 import { CreateProjectModalComponent } from '../modals/createProjectModal.Component';
+import { connect } from 'react-redux';
+import { IAppState } from '../../../store/state';
+import { Page_State } from '../../../store/actions/page';
 
 interface IState
 {
   projects: Project[];
   isShow: boolean;
+}
+
+interface IStateProps
+{
+  page: Page_State.State.IState;
 }
 
 export class ProjectsComponent extends React.Component<{}, IState>
@@ -64,3 +72,9 @@ export class ProjectsComponent extends React.Component<{}, IState>
     );
   }
 }
+
+const mapStateToProps = (state: IAppState): IStateProps => ({
+  page: state.page
+});
+
+export const ProjectsComponent_Connect = connect(mapStateToProps)(ProjectsComponent);
