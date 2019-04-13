@@ -5,8 +5,9 @@ import { tableColumnsProjects } from '../../../models/table-maps';
 import { TableComponent } from '../../../controls/table/table.Component';
 import { CreateProjectModalComponent } from '../modals/createProjectModal.Component';
 import { connect } from 'react-redux';
-import { IAppState } from '../../../store/state';
 import { Page_State } from '../../../store/actions/page';
+import { Page } from '../../../routes/page';
+import { ConnectedProps } from '../../../store/types';
 
 interface IState
 {
@@ -14,14 +15,11 @@ interface IState
   isShow: boolean;
 }
 
-interface IStateProps
-{
-  page: Page_State.State.IState;
-}
+type IProps = ConnectedProps;
 
-export class ProjectsComponent extends React.Component<{}, IState>
+export class ProjectsComponent extends React.Component<IProps, IState>
 {
-  constructor(props: {})
+  constructor(props: IProps)
   {
     super(props);
 
@@ -29,6 +27,8 @@ export class ProjectsComponent extends React.Component<{}, IState>
       projects: [],
       isShow: false
     };
+
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Projects.title));
   }
 
   public componentDidMount(): void
@@ -73,8 +73,4 @@ export class ProjectsComponent extends React.Component<{}, IState>
   }
 }
 
-const mapStateToProps = (state: IAppState): IStateProps => ({
-  page: state.page
-});
-
-export const ProjectsComponent_Connect = connect(mapStateToProps)(ProjectsComponent);
+export const ProjectsComponent_Connect = connect(null)(ProjectsComponent);

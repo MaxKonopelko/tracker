@@ -2,7 +2,11 @@ import { default as React, ReactNode } from 'react';
 import { TableComponent } from '../../../controls/table/table.Component';
 import { UsersService } from '../../../services/users.service';
 import { tableColumnsUsers } from '../../../models/table-maps';
-import { Client, User } from '../../../models/models';
+import { User } from '../../../models/models';
+import { connect } from 'react-redux';
+import { ConnectedProps } from '../../../store/types';
+import { Page } from '../../../routes/page';
+import { Page_State } from '../../../store/actions/page';
 
 interface IState
 {
@@ -10,9 +14,11 @@ interface IState
   isShow: boolean;
 }
 
-export class UsersComponent extends React.Component<{}, IState>
+type IProps = ConnectedProps;
+
+export class UsersComponent extends React.Component<IProps, IState>
 {
-  constructor(props: {})
+  constructor(props: IProps)
   {
     super(props);
 
@@ -21,8 +27,8 @@ export class UsersComponent extends React.Component<{}, IState>
       isShow: false,
     };
 
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Users.title));
     this.refreshTable = this.refreshTable.bind(this);
-
   }
 
   public refreshTable(): void
@@ -60,3 +66,5 @@ export class UsersComponent extends React.Component<{}, IState>
     );
   }
 }
+
+export const UsersComponent_Connect = connect(null)(UsersComponent);

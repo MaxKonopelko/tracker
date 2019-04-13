@@ -5,19 +5,27 @@ import { Team_State } from '../../../store/actions/team';
 import { FormControl, InputGroup } from 'react-bootstrap';
 import { IAppState } from '../../../store/state';
 import { Page_State } from '../../../store/actions/page';
-
-type IProps = ConnectedProps<IStateProps>;
+import { Page } from '../../../routes/page';
 
 interface IStateProps
 {
   team: Team_State.State.IState;
 }
 
+type IProps = ConnectedProps<IStateProps>;
+
 class TeamComponent extends React.Component<IProps>
 {
+  constructor(props: IProps)
+  {
+    super(props);
+
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Projects.title));
+  }
+
   public componentDidMount(): void
   {
-    this.props.dispatch(Page_State.Thunks.changeTitle('Team'));
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Team.title));
   }
 
   private onChange = (event: React.FormEvent<HTMLInputElement>) =>

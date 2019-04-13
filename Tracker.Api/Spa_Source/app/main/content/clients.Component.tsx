@@ -4,6 +4,10 @@ import { TableComponent } from '../../../controls/table/table.Component';
 import { tableColumnsClients } from '../../../models/table-maps';
 import { CreateClientsModalComponent } from '../modals/createClientsModal.Component';
 import { ClientService } from '../../../services/client.service';
+import { connect } from 'react-redux';
+import { ConnectedProps } from '../../../store/types';
+import { Page } from '../../../routes/page';
+import { Page_State } from '../../../store/actions/page';
 
 interface IState
 {
@@ -11,9 +15,11 @@ interface IState
   isShow: boolean;
 }
 
-export class ClientsComponent extends React.Component<{}, IState>
+type IProps = ConnectedProps;
+
+export class ClientsComponent extends React.Component<IProps, IState>
 {
-  constructor(props: {})
+  constructor(props: IProps)
   {
     super(props);
 
@@ -22,6 +28,7 @@ export class ClientsComponent extends React.Component<{}, IState>
       isShow: false,
     };
 
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Clients.title));
     this.refreshTable = this.refreshTable.bind(this);
   }
 
@@ -66,3 +73,5 @@ export class ClientsComponent extends React.Component<{}, IState>
     );
   }
 }
+
+export const ClientsComponent_Connect = connect(null)(ClientsComponent);

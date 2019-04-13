@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
+import { connect } from 'react-redux';
+import { ConnectedProps } from '../../../store/types';
+import { Page } from '../../../routes/page';
+import { Page_State } from '../../../store/actions/page';
 
-export class TimerComponent extends React.Component<{}>
+type IProps = ConnectedProps;
+
+export class TimerComponent extends React.Component<IProps>
 {
-  constructor(props: {})
+  constructor(props: IProps)
   {
     super(props);
+
+    this.props.dispatch(Page_State.Thunks.changeTitle(Page.Timer.title));
   }
 
   public render(): ReactNode
@@ -44,3 +52,5 @@ export class TimerComponent extends React.Component<{}>
     );
   }
 }
+
+export const TimerComponent_Connect = connect(null)(TimerComponent);
