@@ -1,4 +1,4 @@
-import { default as React, ReactNode } from 'react';
+import { default as React } from 'react';
 import { TableComponent } from '../../../controls/table/table.Component';
 import { UsersService } from '../../../services/users.service';
 import { tableColumnsUsers } from '../../../models/table-maps';

@@ -21,4 +21,4 @@ const configureStore = (): Store<IAppState> =>
   );
 };
 
-export const store = configureStore();
+export const globalStore = configureStore();

@@ -30,4 +30,22 @@ namespace Tracker.Api.ModelsDomain
         public string Client { get; set; }
         public int UsersCount { get; set; }
     }
+
+    public class ProjectDetail : DomainBase
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Budget { get; set; }
+        public string Status { get; set; }
+        public string Actions { get; set; }
+        public string Client { get; set; }
+        public List<UserDisplay> Users { get; set; }
+    }
+
+    public class UserDisplay : DomainBase
+    {
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
 }

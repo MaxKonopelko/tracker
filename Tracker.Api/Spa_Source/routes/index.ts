@@ -1,8 +1,7 @@
-import createBrowserHistory from 'history/createBrowserHistory';
-
-export const browserHistory = createBrowserHistory();
+import { globalStore } from '../store/store';
+import { push } from 'connected-react-router';
 
 export function routerRedirect(path: string): void
 {
-  browserHistory.push(path);
+  globalStore.dispatch(push(path));
 }

@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #eff3f6;
+  background: #eff3f6 !important;
   min-width: 1024px;
   margin: 0;
   color: #354052;
@@ -357,6 +357,10 @@ body {
     -o-border-radius: 4px;
     border-radius: 4px;
     margin: 0 0 10px;
+
+    .container-form {
+      padding: 29px 29px 13px;
+    }
   }
 
   .head-line {
@@ -529,7 +533,8 @@ body {
         width: 220px;
         margin-left: 10px;
       }
-      .aside-btn .btn { margin-left: 10px;}
+      .aside-btn .btn {
+        margin-left: 10px;}
     }
   }
   @media (max-width: 767px) {
@@ -797,134 +802,135 @@ body {
   }
 }
 
-.row{
-  margin: 0 -8px ;
+.row {
+  margin: 0 -8px;
 
-  &:after{
+  &:after {
     content: '';
     clear: both;
     display: block;
   }
-  .col{
+  .col {
     float: left;
     width: 50%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 8px ;
+    padding: 0 8px;
   }
 }
-table{
-  width: 100% ;
-  border-collapse: collapse ;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
   margin: 0;
-  background: #fff ;
-  @include border-radius( 0 0 4px 4px );
-  font-size: $font-size-table ;
-  line-height: $line-height-table ;
-  font-family: $font-family-semibold ;
+  background: #fff;
+  @include border-radius(0 0 4px 4px);
+  font-size: $font-size-table;
+  line-height: $line-height-table;
+  font-family: $font-family-semibold;
 
-  th{
-    border-top: 1px solid #E6EAEE ;
-    background-color: #F5F8FA ;
-    padding: 8px 10px ;
-    text-align: left ;
-    color: #7F8FA4 ;
-    font-weight: normal ;
-
-    &:first-child { padding-left: 19px ; }
-    &:last-child { padding-right: 19px ; }
-
-    .hold-check .customCheckbox{ margin-top: 0 ;}
-  }
-  td{
-    padding: 5px 10px 4px ;
+  th {
+    background-color: #eff3f6;
     border-top: 1px solid #E6EAEE;
-    height: 46px ;
+    padding: 8px 10px;
+    text-align: left;
+    color: #7F8FA4;
+    font-weight: normal;
+
+    &:first-child { padding-left: 19px; }
+    &:last-child { padding-right: 19px; }
+
+    .hold-check .customCheckbox { margin-top: 0;}
+  }
+  td {
+    padding: 5px 10px 4px;
+    border-top: 1px solid #E6EAEE;
+    height: 46px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    &:first-child { padding-left: 19px ; }
-    &:last-child { padding-right: 19px ; }
+    &:first-child { padding-left: 19px; }
+    &:last-child { padding-right: 19px; }
   }
-  .hold-check{
+  .hold-check {
     display: inline-block;
     vertical-align: top;
-    padding: 0 0 0 26px ;
+    padding: 0 0 0 26px;
 
-    .customCheckbox{
+    .customCheckbox {
       float: left;
-      margin: -1px 0 0 -26px ;
+      margin: -1px 0 0 -26px;
     }
   }
-  .text-gray{
-    display: block ;
-    font: 12px/15px $font-family-regular ;
-    color: #7F8FA4 ;
-    padding: 4px 0 0 ;
+  .text-gray {
+    display: block;
+    font: 12px/15px $font-family-regular;
+    color: #7F8FA4;
+    padding: 4px 0 0;
   }
-  .wrap-badge{
+  .wrap-badge {
     padding: 0 0 0 16px;
-    display: inline-block ;
+    display: inline-block;
     vertical-align: top;
 
-    .number{
-      float: left ;
-      margin: 0 0 0 -16px ;
-      font-size: 14px ;
-      line-height: 18px ;
+    .number {
+      float: left;
+      margin: 0 0 0 -16px;
+      font-size: 14px;
+      line-height: 18px;
     }
-    .badge{ margin: 1px 0 2px ; }
+    .badge { margin: 1px 0 2px; }
   }
-  .cell-center{ text-align: center;}
-  .wrap-tooltip{ margin: 0 2px ;}
+  .cell-center { text-align: center;}
+  .wrap-tooltip { margin: 0 2px;}
 
-  .odd-green ,
-  .odd-red ,
+  .odd-green,
+  .odd-red,
   .odd-blue {
-    td:first-child{
-      border-left: 3px solid $border-table-green ;
-      padding-left: 18px ;
+    td:first-child {
+      border-left: 3px solid $border-table-green;
+      padding-left: 18px;
     }
   }
-  .odd-red td:first-child{
-    border-left-color: $border-table-red ;
+  .odd-red td:first-child {
+    border-left-color: $border-table-red;
   }
-  .odd-blue td:first-child{
-    border-left-color: $border-table-blue ;
+  .odd-blue td:first-child {
+    border-left-color: $border-table-blue;
   }
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea{
-  width:100%;
-  padding: 9px 11px 8px ;
-  height: 36px ;
-  color: $input-color  ;
-  margin:0 0 16px;
-  border: 1px solid $border-input ;
-  @include border-radius( 4px);
-  background: #fff ;
+textarea {
+  width: 100%;
+  padding: 9px 11px 8px;
+  height: 36px;
+  color: $input-color;
+  margin: 0 0 16px;
+  border: 1px solid $border-input;
+  @include border-radius(4px);
+  background: #fff;
   outline: none;
   outline: 0;
-  font-family: $font-family-semibold ;
-  font-weight: normal ;
-  font-size: $font-size-input ;
-  line-height: $line-height-input ;
+  font-family: $font-family-semibold;
+  font-weight: normal;
+  font-size: $font-size-input;
+  line-height: $line-height-input;
   @include box-sizing(border-box);
   -webkit-appearance: none;
-  @include transition( box-shadow .2s ease-in-out , border-color .2s ease-in-out , color .2s ease-in-out, background .2s ease-in-out );
+  @include transition(box-shadow .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out, background .2s ease-in-out);
 
   &:hover {
-    color: $input-color-focus ;
+    color: $input-color-focus;
   }
   &:focus {
-    color: $input-color-focus ;
-    border-color: $border-input-focus ;
+    color: $input-color-focus;
+    border-color: $border-input-focus;
   }
   &.error,
-  &.error:focus { border-color: $border-red ;}
+  &.error:focus { border-color: $border-red;}
 }

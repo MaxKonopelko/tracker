@@ -4,7 +4,7 @@ import { RegistrationService } from '../../services/registration.service';
 import { Growl } from '../../libraries/growl';
 import { Patterns } from '../../controls/controls';
 import { Link } from 'react-router-dom';
-import { User } from '../../models/models';
+import { UserRegister } from '../../models/models';
 
 interface IProps
 {
@@ -35,7 +35,7 @@ export class RegisterComponent extends React.Component<IProps, IState>
     };
   }
 
-  private registerUser(user: User): void
+  private registerUser(user: UserRegister): void
   {
 
     RegistrationService.add(user).then(bool =>
@@ -68,7 +68,7 @@ export class RegisterComponent extends React.Component<IProps, IState>
   {
     event.preventDefault();
 
-    const user = {
+    const user: UserRegister = {
       name: this.state.name,
       password: this.state.password,
       email: this.state.email,

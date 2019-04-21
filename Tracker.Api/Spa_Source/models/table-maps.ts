@@ -76,3 +76,18 @@ export const tableColumnsUsers: ITableColumn[] = [
     label: 'Projects Count'
   }
 ];
+
+export const tableColumnsUsersProfile: ITableColumn[] = [
+  {
+    key: 'name',
+    label: 'Name'
+  },
+  {
+    key: 'email',
+    label: 'Email'
+  },
+  {
+    key: 'age',
+    label: 'Age'
+  }
+];

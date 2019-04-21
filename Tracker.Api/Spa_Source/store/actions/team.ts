@@ -63,7 +63,7 @@ export namespace Team_State
     }
 
     export const init: IState = {
-      title: 'Empty11',
+      title: 'Empty',
     };
 
     export const Reducer = (state: IState = init, action: Actions.Types.Actions): IState =>

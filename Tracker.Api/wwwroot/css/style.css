@@ -161,7 +161,7 @@
   background: red; }
 
 body {
-  background: #eff3f6;
+  background: #eff3f6 !important;
   min-width: 1024px;
   margin: 0;
   color: #354052;
@@ -233,7 +233,7 @@ body {
       font-family: "proxima_novasemibold", arial, helvetica, sans-serif; }
       body #main table th {
         border-top: 1px solid #E6EAEE;
-        background-color: #F5F8FA;
+        background-color: #eff3f6;
         padding: 8px 10px;
         text-align: left;
         color: #7F8FA4;
@@ -290,12 +290,13 @@ body {
         color: #7F8FA4;
         padding: 4px 0 0; }
     body #main .aside-btn {
+      padding: 12px;
       float: right;
       margin: 0 0 -1px; }
       body #main .aside-btn .btn {
+        margin: auto;
         float: left;
-        min-width: 120px;
-        margin: 0 0 16px 16px; }
+        min-width: 120px; }
     body #main .btn {
       min-width: 72px;
       height: 36px;
@@ -736,6 +737,8 @@ body {
     -o-border-radius: 4px;
     border-radius: 4px;
     margin: 0 0 10px; }
+    body .container-white .container-form {
+      padding: 29px 29px 13px; }
   body .head-line {
     padding: 15px 0 0;
     margin: 0 0 -1px;
@@ -1221,8 +1224,8 @@ table {
   line-height: 17px;
   font-family: "proxima_novasemibold", arial, helvetica, sans-serif; }
   table th {
+    background-color: #eff3f6;
     border-top: 1px solid #E6EAEE;
-    background-color: #F5F8FA;
     padding: 8px 10px;
     text-align: left;
     color: #7F8FA4;

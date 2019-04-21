@@ -1,11 +1,14 @@
 import { default as React, ReactNode } from 'react';
 import { ITableColumn } from '../../models/table-maps';
 import { EntityBase } from '../../models/models';
+import { routerRedirect } from '../../routes';
+import { IPage } from '../../routes/page';
 
 interface IProps<TEntityRow extends EntityBase>
 {
   columns: ITableColumn[];
   rows: TEntityRow[];
+  page?: IPage;
 }
 
 export class TableComponent<TEntityRow extends EntityBase> extends React.Component<IProps<TEntityRow>>
@@ -15,10 +18,16 @@ export class TableComponent<TEntityRow extends EntityBase> extends React.Compone
     super(props);
   }
 
-  public getRow(row: TEntityRow): ReactNode
+  private onRedirectToProfile = (id: number) =>
+  {
+    const str = this.props.page.route.replace(':id', id.toString());
+    routerRedirect(str);
+  };
+
+  private getRow(row: TEntityRow): ReactNode
   {
     return (
-      <tr key={row.id}>
+      <tr key={row.id} onDoubleClick={() => this.onRedirectToProfile(row.id)}>
         {
           this.props.columns.map(column =>
             {

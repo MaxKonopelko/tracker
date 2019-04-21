@@ -1,10 +1,10 @@
-interface IPage
+export interface IPage
 {
   route: string;
   title?: string;
 }
 
-export class Main
+export class Page
 {
   public static readonly Main: IPage = {
     route: '/main',
@@ -15,10 +15,7 @@ export class Main
     route: '/auth',
     title: 'Auth'
   };
-}
 
-export class Auth
-{
   public static readonly Login: IPage = {
     route: '/auth/login',
     title: 'Login'
@@ -28,10 +25,7 @@ export class Auth
     route: '/auth/register',
     title: 'Register'
   };
-}
 
-export class Page
-{
   public static readonly Dashboard: IPage = {
     route: '/main/dashboard',
     title: 'Dashboard'
@@ -75,5 +69,4 @@ export class Page
     route: '/main/help',
     title: 'Help'
   };
-
 }

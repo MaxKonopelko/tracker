@@ -19,7 +19,7 @@
 
     th {
       border-top: 1px solid #E6EAEE;
-      background-color: #F5F8FA;
+      background-color: #eff3f6;
       padding: 8px 10px;
       text-align: left;
       color: #7F8FA4;
@@ -105,13 +105,14 @@
   }
 
   .aside-btn{
+    padding: 12px;
     float: right;
     margin: 0 0 -1px ;
 
     .btn{
+      margin: auto;
       float: left;
       min-width: 120px ;
-      margin: 0 0 16px 16px ;
     }
   }
 

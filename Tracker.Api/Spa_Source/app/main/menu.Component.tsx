@@ -1,5 +1,6 @@
 import { default as React, ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Page } from '../../routes/page';
 
 export class MenuComponent extends React.Component
 {
@@ -11,7 +12,7 @@ export class MenuComponent extends React.Component
           <div className="hold-logo"><strong className="logo"><a href="#">Toys for tots</a></strong></div>
           <ul className="menu">
 
-            <li><NavLink to="/main/dashboard" activeClassName="active">
+            <li><NavLink to={Page.Dashboard.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/growth.svg" width="32" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -22,7 +23,7 @@ export class MenuComponent extends React.Component
             </li>
 
             <li>
-              <NavLink to="/main/timer" activeClassName="active">
+              <NavLink to={Page.Timer.route} activeClassName="active">
                         <span className="menu-icon">
                              <img src="/images/stopwatch.svg" width="32" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -32,7 +33,7 @@ export class MenuComponent extends React.Component
                 Timer</NavLink>
             </li>
             <li>
-              <NavLink to="/main/reports" activeClassName="active">
+              <NavLink to={Page.Reports.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/report.svg" width="34" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -43,7 +44,7 @@ export class MenuComponent extends React.Component
                 Reports</NavLink>
             </li>
             <li>
-              <NavLink to="/main/users" activeClassName="active">
+              <NavLink to={Page.Users.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/teamwork%20(2).svg" width="30" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -52,7 +53,7 @@ export class MenuComponent extends React.Component
                         </span>
                 Users</NavLink>
             </li>
-            <li><NavLink to="/main/projects" activeClassName="active">
+            <li><NavLink to={Page.Projects.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/3d.svg" width="28" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -62,7 +63,7 @@ export class MenuComponent extends React.Component
               Projects</NavLink>
             </li>
             <li>
-              <NavLink to="/main/clients" activeClassName="active">
+              <NavLink to={Page.Clients.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/teamwork%20(2).svg" width="30" height="30" alt="image"/>
                             <span className="inner-icon">
@@ -72,7 +73,7 @@ export class MenuComponent extends React.Component
                 Clients</NavLink>
             </li>
             <li>
-              <NavLink to="/main/team" activeClassName="active">
+              <NavLink to={Page.Team.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/collaboration.svg" width="32" height="32" alt="image"/>
                             <span className="inner-icon">
@@ -82,7 +83,7 @@ export class MenuComponent extends React.Component
                 Team</NavLink>
             </li>
             <li>
-              <NavLink to="/main/help" activeClassName="active">
+              <NavLink to={Page.Help.route} activeClassName="active">
                         <span className="menu-icon">
                             <img src="/images/customer-support.svg" width="34" height="32" alt="image"/>
                             <span className="inner-icon">

@@ -23,28 +23,28 @@ namespace Tracker.DAL
                 new User
                 {
                     Name = "Max",
-                    Email = "111",
+                    Email = "oma@rambler.ru",
                     Password = "111",
-                    Age = 33
+                    Age = 25
                 },
                 new User
                 {
                     Name = "Tom",
-                    Email = "222",
+                    Email = "tom1992@rambler.ru",
                     Password = "111",
                     Age = 17
                 },
                 new User
                 {
                     Name = "Rom",
-                    Email = "333",
+                    Email = "work@gmail.com",
                     Password = "111",
                     Age = 61
                 },
                 new User
                 {
                     Name = "Gnom",
-                    Email = "444",
+                    Email = "bla@mail.ru",
                     Password = "111",
                     Age = 22
                 }

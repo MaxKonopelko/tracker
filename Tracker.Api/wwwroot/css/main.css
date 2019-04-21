@@ -57,7 +57,7 @@
     font-family: "proxima_novasemibold", arial, helvetica, sans-serif; }
     #main table th {
       border-top: 1px solid #E6EAEE;
-      background-color: #F5F8FA;
+      background-color: #eff3f6;
       padding: 8px 10px;
       text-align: left;
       color: #7F8FA4;
@@ -114,12 +114,13 @@
       color: #7F8FA4;
       padding: 4px 0 0; }
   #main .aside-btn {
+    padding: 12px;
     float: right;
     margin: 0 0 -1px; }
     #main .aside-btn .btn {
+      margin: auto;
       float: left;
-      min-width: 120px;
-      margin: 0 0 16px 16px; }
+      min-width: 120px; }
   #main .btn {
     min-width: 72px;
     height: 36px;
