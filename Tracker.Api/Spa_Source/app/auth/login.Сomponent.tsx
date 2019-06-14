@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
-import { LoginModel } from '../../models/models';
+import { JwtRequest } from '../../models/models';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { AuthService } from '../../services/auth.service';
 
@@ -29,7 +29,6 @@ export class LoginComponent extends React.Component<IProps, IState>
   constructor(props: IProps)
   {
     super(props);
-    console.log('props', props);
 
     this.state = {
       email: '',
@@ -37,11 +36,9 @@ export class LoginComponent extends React.Component<IProps, IState>
     };
   }
 
-  private loginUser(loginModel: LoginModel): void
+  private loginUser(loginModel: JwtRequest): void
   {
-    AuthService.auth(loginModel).then(res => {
-      console.warn('RES', res);
-    });
+    AuthService.auth(loginModel);
   }
 
   private onChange = (event: React.FormEvent<HTMLInputElement>) =>
@@ -60,9 +57,10 @@ export class LoginComponent extends React.Component<IProps, IState>
   {
     event.preventDefault();
 
-    const loginModel: LoginModel = {
+    const loginModel: JwtRequest = {
       email: this.state.email,
       password: this.state.password,
+      grantType: 'password'
     };
 
     this.loginUser(loginModel);
@@ -71,7 +69,7 @@ export class LoginComponent extends React.Component<IProps, IState>
   public render(): ReactNode
   {
     return (
-      <div className="container-login" >
+      <div className="container-login">
         <form action="#" onSubmit={this.handleSubmit}>
           <div className="extra-top">
             <strong className="logo"><a href="#">Toys for tots</a></strong>
@@ -98,20 +96,20 @@ export class LoginComponent extends React.Component<IProps, IState>
   }
 }
 
-{/*<div className="auth-form">*/}
-  {/*<form id="form" className="auth-form-content animate" onSubmit={this.handleSubmit}>*/}
-    {/*<div className="container">*/}
-      {/*<label htmlFor="email">Email</label>*/}
-      {/*<input id="email" name="email" type="text" onChange={this.onChange} value={this.state.email} placeholder="Enter Email"/>*/}
-
-      {/*<label htmlFor="password">Password</label>*/}
-      {/*<input type="password" name="password" onChange={this.onChange} value={this.state.password} placeholder="Enter Password"/>*/}
-
-      {/*<button type="submit">Login</button>*/}
-      {/*<Link to="/auth/register">*/}
-        {/*<button id="button-red" type="submit">Go To Register</button>*/}
-      {/*</Link>*/}
-    {/*</div>*/}
-    {/*<div className="container" style={{backgroundColor: '#f1f1f1'}}/>*/}
-  {/*</form>*/}
-{/*</div>*/}
+// {/*<div className="auth-form">*/}
+//   {/*<form id="form" className="auth-form-content animate" onSubmit={this.handleSubmit}>*/}
+//     {/*<div className="container">*/}
+//       {/*<label htmlFor="email">Email</label>*/}
+//       {/*<input id="email" name="email" type="text" onChange={this.onChange} value={this.state.email} placeholder="Enter Email"/>*/}
+//
+//       {/*<label htmlFor="password">Password</label>*/}
+//       {/*<input type="password" name="password" onChange={this.onChange} value={this.state.password} placeholder="Enter Password"/>*/}
+//
+//       {/*<button type="submit">Login</button>*/}
+//       {/*<Link to="/auth/register">*/}
+//         {/*<button id="button-red" type="submit">Go To Register</button>*/}
+//       {/*</Link>*/}
+//     {/*</div>*/}
+//     {/*<div className="container" style={{backgroundColor: '#f1f1f1'}}/>*/}
+//   {/*</form>*/}
+// {/*</div>*/}

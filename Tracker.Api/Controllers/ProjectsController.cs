@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ using Tracker.DAL;
 
 namespace Tracker.Api.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/Projects")]
     public class ProjectsController : Controller
@@ -26,6 +28,7 @@ namespace Tracker.Api.Controllers
         [HttpGet("get-all")]
         public List<ProjectDisplay> GetAll()
         {
+            
             IQueryable<ProjectDisplay> projectsDisplays = _context.Projects
                 .Select(project => new ProjectDisplay
                 {

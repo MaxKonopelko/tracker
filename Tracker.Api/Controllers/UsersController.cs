@@ -26,16 +26,11 @@ namespace Tracker.Api.Controllers
 
             return users;
         }
-
-        //[HttpGet("get-all")]
-        //public List<User> GetAll()
-        //{
-            
-        //}
-
+     
         [HttpPost("add")]
         public bool Add([FromBody] User user)
         {
+
             if (_context.Users.Any(x => x.Email == user.Email))
             {
                 return false;

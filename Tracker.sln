@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracker.Api", "Tracker.Api\Tracker.Api.csproj", "{BF278CBE-5C59-40A1-802C-01F35ABBEC03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.DAL", "Tracker.DAL\Tracker.DAL.csproj", "{DB198DE8-40BE-40D2-83E4-5289B511D307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracker.DAL", "Tracker.DAL\Tracker.DAL.csproj", "{DB198DE8-40BE-40D2-83E4-5289B511D307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.Common", "Tracker.Common\Tracker.Common.csproj", "{36F8BDBE-592C-42F6-89E6-B1E76EA78450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DB198DE8-40BE-40D2-83E4-5289B511D307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB198DE8-40BE-40D2-83E4-5289B511D307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB198DE8-40BE-40D2-83E4-5289B511D307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F8BDBE-592C-42F6-89E6-B1E76EA78450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F8BDBE-592C-42F6-89E6-B1E76EA78450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F8BDBE-592C-42F6-89E6-B1E76EA78450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F8BDBE-592C-42F6-89E6-B1E76EA78450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

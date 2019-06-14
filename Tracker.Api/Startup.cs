@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Tracker.Api.Providers;
 using Tracker.DAL;
 
 namespace Tracker.Api
@@ -36,10 +37,15 @@ namespace Tracker.Api
                     options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
-            
-            string modeconnection = IsDev ? "DevConnection" : "ProdConnection";
-            string connection = Configuration.GetConnectionString(modeconnection);
+
+            services.AddAuthorization();
+
+            var modeConnection = IsDev ? "DevConnection" : "ProdConnection";
+            var connection = Configuration.GetConnectionString(modeConnection);
             InitDb.InitConnectionString(services, connection);
+
+            services.AddTransient<OAuthProvider>();
+            OAuthConfig.Register(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +60,8 @@ namespace Tracker.Api
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseExceptionHandler(appError =>
             {

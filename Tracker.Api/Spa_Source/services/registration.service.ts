@@ -5,6 +5,6 @@ export class RegistrationService
 {
   public static add(user: UserRegister): Promise<number>
   {
-    return HttpService.httpService(`User/add`, HttpMethod.POST, user);
+    return HttpService.send(`Users/add`, HttpMethod.POST, user);
   }
 }

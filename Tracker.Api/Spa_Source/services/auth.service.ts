@@ -1,42 +1,44 @@
-import { LoginModel, OperationResult, User } from '../models/models';
+import { JwtRequest, JwtResponse, OperationResult } from '../models/models';
 import { HttpMethod, HttpService } from './http.service';
 import { routerRedirect } from '../routes';
 import { BrowserStorage } from '../libraries/browser-storage';
-import { Growl } from '../libraries/growl';
 
-function bla<T>(ttt: T): T
-{
-  return ttt;
-}
-
-bla<number>(12);
+// function bla<T>(ttt: T): T
+// {
+//   return ttt;
+// }
+//
+// bla<number>(12);
 
 export class AuthService
 {
-  private static storage = new BrowserStorage<User>('user');
+  public static storage = new BrowserStorage<JwtResponse>('user');
 
-  public static auth(loginModel: LoginModel): Promise<OperationResult<User>>
+  public static auth(loginModel: JwtRequest): Promise<OperationResult<JwtResponse>>
   {
-    return HttpService.httpService<OperationResult<User>>(`User/login`, HttpMethod.POST, loginModel)
+    return HttpService.send<OperationResult<JwtResponse>>(`Tokens`, HttpMethod.POST, loginModel)
       .then(operationResult =>
       {
-        console.log('boolAuth', operationResult);
         if (operationResult.success)
         {
-          this.addUser(operationResult.object);
+          this.addJwt(operationResult.object);
           routerRedirect('/main');
         }
         else
         {
-          Growl.error(operationResult.message);
           console.log('bla bla bla');
         }
         return operationResult;
       });
   }
 
-  public static addUser(user: User): void
+  public static addJwt(user: JwtResponse): void
   {
     this.storage.setObject(user);
+  }
+
+  public static getJwt(): JwtResponse
+  {
+    return this.storage.getObject();
   }
 }

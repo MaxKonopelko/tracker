@@ -29,7 +29,7 @@ export class ProjectsComponent extends React.Component<IProps, IState>
     };
 
     this.props.dispatch(Page_State.Thunks.changeTitle(Page.Projects.title));
-}
+  }
 
   public componentDidMount(): void
   {
@@ -38,8 +38,9 @@ export class ProjectsComponent extends React.Component<IProps, IState>
 
   public refreshTable = () =>
   {
-    ProjectService.get().then(projects =>
+    ProjectService.getAll().then(projects =>
     {
+      console.warn('projects', projects);
       this.setState({
         projects: projects
       });
@@ -73,4 +74,14 @@ export class ProjectsComponent extends React.Component<IProps, IState>
   }
 }
 
-export const ProjectsComponent_Connect = connect(null)(ProjectsComponent);
+function connect1(mapState: any): Function
+{
+  return function (component: any): void
+  {
+
+  };
+}
+
+const func = connect1(null);
+
+export const ProjectsComponent_Connect = func(ProjectsComponent);

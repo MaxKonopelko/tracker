@@ -14,7 +14,6 @@ namespace Tracker.Api.Models
         public OperationResult()
         {
             Success = true;
-            
         }
     }
 }

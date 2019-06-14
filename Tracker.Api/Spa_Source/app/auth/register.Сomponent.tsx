@@ -37,7 +37,7 @@ export class RegisterComponent extends React.Component<IProps, IState>
 
   private registerUser(user: UserRegister): void
   {
-
+    console.log(user);
     RegistrationService.add(user).then(bool =>
     {
       if (!bool)

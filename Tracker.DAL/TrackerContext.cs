@@ -20,6 +20,7 @@ namespace Tracker.DAL
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Project> Projects { get; set; }
     }
@@ -98,11 +99,26 @@ namespace Tracker.DAL
         public string Password { get; set; }
 
         [Required]
+        public string Salt { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         public int Age { get; set; }
 
         public virtual List<ProjectUser> ProjectsUsers { get; set; }
+    }
+
+    public class RefreshToken
+    {
+        public RefreshToken()
+        {
+            CreatedDate = DateTime.UtcNow;
+        }
+
+        public string Id { get; set; }
+
+        public DateTime CreatedDate { get; set; }
     }
 
     public class ProjectUser

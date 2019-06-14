@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using Tracker.Common;
+
 
 namespace Tracker.DAL
 {
@@ -18,34 +20,40 @@ namespace Tracker.DAL
 
         private static void CreateUsers(TrackerContext context)
         {
+            var user = SaltedHash.GetSalt("111");
+            
             context.Users.AddRange(new List<User>
             {
                 new User
                 {
                     Name = "Max",
                     Email = "oma@rambler.ru",
-                    Password = "111",
-                    Age = 25
+                    Password = user.hash,
+                    Salt = user.salt,
+                    Age = 25, 
                 },
                 new User
                 {
                     Name = "Tom",
                     Email = "tom1992@rambler.ru",
-                    Password = "111",
+                    Password = user.hash,
+                    Salt = user.salt,
                     Age = 17
                 },
                 new User
                 {
                     Name = "Rom",
                     Email = "work@gmail.com",
-                    Password = "111",
+                    Password = user.hash,
+                    Salt = user.salt,
                     Age = 61
                 },
                 new User
                 {
                     Name = "Gnom",
                     Email = "bla@mail.ru",
-                    Password = "111",
+                    Password = user.hash,
+                    Salt = user.salt,
                     Age = 22
                 }
             });

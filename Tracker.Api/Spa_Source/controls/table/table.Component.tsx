@@ -45,7 +45,7 @@ export class TableComponent<TEntityRow extends EntityBase> extends React.Compone
 
   public render(): ReactNode
   {
-    return (
+    return Array.isArray(this.props.rows) && (
       <div className="container-white">
         <table>
           <tbody>

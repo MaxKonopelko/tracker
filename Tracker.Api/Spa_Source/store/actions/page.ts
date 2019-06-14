@@ -65,5 +65,9 @@ export namespace Page_State
       document.title = title;
       dispatch(Actions.Of.changeTitleAction(title));
     };
+
+    export const test = (dispatch: Dispatch) => {
+
+    };
   }
 }

@@ -5,6 +5,6 @@ export class UsersService
 {
   public static get(): Promise<User[]>
   {
-    return HttpService.httpService(`Users/get-all`, HttpMethod.GET);
+    return HttpService.send(`Users/get-all`, HttpMethod.GET);
   }
 }

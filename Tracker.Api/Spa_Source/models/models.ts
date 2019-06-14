@@ -4,6 +4,21 @@ export class EntityBase
   public createdDate?: Date;
 }
 
+export class JwtResponse
+{
+  public accessToken: string;
+  public refreshToken: string;
+  public userDisplay: UserDisplay;
+}
+
+export class UserDisplay extends EntityBase
+{
+  public email: string;
+  public password: string;
+  public name: string;
+  public age?: any;
+}
+
 export class UserRegister
 {
   public email: string;
@@ -41,10 +56,12 @@ export class Project extends EntityBase
   public users?: User[] = [];
 }
 
-export class LoginModel
+export class JwtRequest
 {
   public email: string;
-  public password: string;
+  public password?: string;
+  public refreshToken?: string;
+  public grantType: 'password' | 'refresh_token';
 }
 
 export class OperationResult<T>

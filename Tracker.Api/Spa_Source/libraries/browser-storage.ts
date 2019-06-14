@@ -17,7 +17,14 @@ export class BrowserStorage<T>
   {
     const item = localStorage.getItem(this.key);
 
-    return JSON.parse(item);
+    try
+    {
+      return JSON.parse(item);
+    }
+    catch (e)
+    {
+      return null;
+    }
   }
 
   public clear(): void

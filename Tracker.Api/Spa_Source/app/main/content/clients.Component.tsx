@@ -17,7 +17,7 @@ interface IState
 
 type IProps = ConnectedProps;
 
-export class ClientsComponent extends React.Component<IProps, IState>
+export class ClientsComponent extends React.PureComponent<IProps, IState>
 {
   constructor(props: IProps)
   {
@@ -29,6 +29,8 @@ export class ClientsComponent extends React.Component<IProps, IState>
     };
 
     this.props.dispatch(Page_State.Thunks.changeTitle(Page.Clients.title));
+    //Page_State.Thunks.test(this.props.dispatch, Page.Clients.title);
+
     this.refreshTable = this.refreshTable.bind(this);
   }
 
